@@ -36,7 +36,7 @@ AMainCharacter::AMainCharacter()
 
     // The camera follows at this distance behind the character
     CameraBoom->TargetArmLength = 300.0f;
-    CameraBoom->RelativeLocation = FVector(0.f, 0.f, 500.f);
+    CameraBoom->RelativeLocation = FVector(0, 0, 0);
 
     // Rotate the arm based on the controller
     CameraBoom->bUsePawnControlRotation = true;
@@ -47,7 +47,10 @@ AMainCharacter::AMainCharacter()
 
     // Camera does not rotate relative to arm
     FollowCamera->bUsePawnControlRotation = false;
-    FollowCamera->RelativeRotation = FRotator(-45.f, 0.f, 0.f);
+
+    //orienting follow camera
+    FollowCamera->RelativeLocation = FVector(-450, 0, 430);
+    FollowCamera->RelativeRotation = FRotator(-30, 0, 0);
 }
 
 void AMainCharacter::SetupPlayerInputComponent(class UInputComponent* InputComponent)
