@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\TurnRoll.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{7D4FE144-43F2-4EA8-9B87-78C5B50B8B45}</UniqueIdentifier>
+      <UniqueIdentifier>{8FEE5EE9-6074-43B6-91B7-8BA25D8FBB12}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\TurnRoll.Target.cs">
       <Filter>Source</Filter>
@@ -13,7 +13,7 @@
     </None>
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{881FFD1A-2701-40E6-B410-7F2AA9DF577C}</UniqueIdentifier>
+      <UniqueIdentifier>{F234DDC0-AB1D-47EC-BF9E-3C4819DF9733}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -31,7 +31,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\TurnRoll">
-      <UniqueIdentifier>{18BC7E87-D69C-475F-B7DD-6B6C728B809A}</UniqueIdentifier>
+      <UniqueIdentifier>{FB316EC2-3CFE-4FFD-92E4-9EBEAA358CDA}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\TurnRoll\StructName.cpp">
       <Filter>Source\TurnRoll</Filter>
@@ -60,5 +60,21 @@
     <ClInclude Include="..\..\Source\TurnRoll\TurnRollGameMode.h">
       <Filter>Source\TurnRoll</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\TurnRoll\MyActor.h">
+      <Filter>Source\TurnRoll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TurnRoll\MainCharacter.h">
+      <Filter>Source\TurnRoll</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\TurnRoll\MyActor.cpp">
+      <Filter>Source\TurnRoll</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TurnRoll\MainCharacter.cpp">
+      <Filter>Source\TurnRoll</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
