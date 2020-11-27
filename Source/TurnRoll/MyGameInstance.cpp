@@ -12,15 +12,17 @@ UMyGameInstance::UMyGameInstance(const class FObjectInitializer& ObjectInitializ
 
 void UMyGameInstance::Init()
 {
+	//Won't run again if the game instance is already intialized
 	if (this->isInitialized)
 	{
 		return;
 	}
+
 	this->isInitialized = true;
 
-	//locating character assets
+	//locating character assets, makes a udatatable which loads the datatable for my characters
 	UDataTable* party = Cast<UDataTable>(StaticLoadObject(
-		UDataTable::StaticClass(), NULL, TEXT("DataTable'/Game/Data/CharacterStats.CharacterStats'")
+		UDataTable::StaticClass(), NULL, TEXT("DataTable'/Game/DataTable/CharacterStats.CharacterStats'")
 	));
 
 	if (party == nullptr)
