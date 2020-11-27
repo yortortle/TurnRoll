@@ -74,6 +74,12 @@
     <ClInclude Include="..\..\Source\TurnRoll\CharacterStats.h">
       <Filter>Source\TurnRoll</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\TurnRoll\FCharInfo.h">
+      <Filter>Source\TurnRoll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TurnRoll\FEnemyInfo.h">
+      <Filter>Source\TurnRoll</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\TurnRoll\MyActor.cpp">
@@ -86,6 +92,12 @@
       <Filter>Source\TurnRoll</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\TurnRoll\CharacterStats.cpp">
+      <Filter>Source\TurnRoll</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TurnRoll\FCharInfo.cpp">
+      <Filter>Source\TurnRoll</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TurnRoll\FEnemyInfo.cpp">
       <Filter>Source\TurnRoll</Filter>
     </ClCompile>
   </ItemGroup>
