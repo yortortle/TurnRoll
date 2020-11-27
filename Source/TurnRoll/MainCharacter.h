@@ -11,38 +11,42 @@ class AMainCharacter : public ACharacter
 {
     GENERATED_BODY()
       
-    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta =
-        (AllowPrivateAccess = "true")) class USpringArmComponent* CameraBoom;
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true")) 
+    class USpringArmComponent* CameraBoom;
 
-    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta =
-        (AllowPrivateAccess = "true")) class UCameraComponent* FollowCamera;
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true")) 
+    class UCameraComponent* FollowCamera;
+
 public:
     AMainCharacter();
 
-    /**Base turn rate, in deg/sec. Other scaling may affect final turn rate.*/
+    //the initial turn rate
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
-        float BaseTurnRate;
+    float BaseTurnRate;
 
 protected:
-
-    /** Called for forwards/backward input */
+    // Called for forwards/backward input 
     void MoveForward(float Value);
 
-    /** Called for side to side input */
+    // Called for side to side input 
     void MoveRight(float Value);
 
+    //rate chracter is turned
     void TurnAtRate(float Rate);
 
-    // APawn interface
+    //set up player component inputs to override
     virtual void SetupPlayerInputComponent (class UInputComponent* InputComponent) override;
-    // End of APawn interface
+
 public:
-    /** Returns CameraBoom subobject **/
-    FORCEINLINE class USpringArmComponent* GetCameraBoom() const {
+    //gets camera boom object
+    FORCEINLINE class USpringArmComponent* GetCameraBoom() const 
+    {
         return CameraBoom;
     }
-    /** Returns FollowCamera subobject **/
-    FORCEINLINE class UCameraComponent* GetFollowCamera() const {
+
+    //gets follow camera object
+    FORCEINLINE class UCameraComponent* GetFollowCamera() const 
+    {
         return FollowCamera;
     }
 };

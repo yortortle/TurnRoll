@@ -13,19 +13,17 @@
 
 AMainCharacter::AMainCharacter()
 {
-    // Set size for collision capsule
+    // Set collision capsule
     GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
 
     // set our turn rates for input
     BaseTurnRate = 45.f;
 
     // Don't rotate when the controller rotates.
-    //Let that just affect the camera.
     bUseControllerRotationPitch = false;
     bUseControllerRotationYaw = false;
     bUseControllerRotationRoll = false;
 
-    // Configure character movement
    // Character moves in the direction of input...
     GetCharacterMovement()->bOrientRotationToMovement = true;
 
@@ -58,10 +56,8 @@ void AMainCharacter::SetupPlayerInputComponent(class UInputComponent* InputCompo
     check(InputComponent);
     InputComponent->BindAxis("MoveForward", this, &AMainCharacter::MoveForward);
     InputComponent->BindAxis("MoveRight", this, &AMainCharacter::MoveRight);
-    /* We have 2 versions of the rotation bindings to handle different
-    kinds of devices differently "turn" handles devices that provide an
-    absolute delta, such as a mouse. "turnrate" is for devices that we
-    choose to treat as a rate of change, such as an analog joystick*/
+
+    //mouse vs joystick / touch
     InputComponent->BindAxis("Turn", this, &APawn::AddControllerYawInput);
     InputComponent->BindAxis("TurnRate", this, &AMainCharacter::TurnAtRate);
 }
@@ -74,6 +70,7 @@ void AMainCharacter::TurnAtRate(float Rate)
 
 void AMainCharacter::MoveForward(float Value)
 {
+    //checks for controller and if there is an actual input passed to it
     if ((Controller != NULL) && (Value != 0.0f))
     {
         // find out which way is forward
@@ -92,10 +89,11 @@ void AMainCharacter::MoveRight(float Value)
         // find out which way is right
         const FRotator Rotation = Controller->GetControlRotation();
         const FRotator YawRotation(0, Rotation.Yaw, 0);
-        // get right vector
 
+        // get right vector
         const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
-        // add movement in that direction
+
+        // move in that direction
         AddMovementInput(Direction, Value);
     }
 }

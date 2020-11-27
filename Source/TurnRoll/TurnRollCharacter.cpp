@@ -49,6 +49,7 @@ ATurnRollCharacter::ATurnRollCharacter()
 
 void ATurnRollCharacter::BeginPlay()
 {
+	Super::BeginPlay();
 	if (DataTable != NULL)
 	{
 		FStructTest* row = DataTable->FindRow<FStructTest>(
