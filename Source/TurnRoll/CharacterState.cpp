@@ -3,12 +3,13 @@
 #include "CharacterState.h"
 #include "TurnRoll.h"
 
+//takes in a pointer to my FCharInfo struct, which is returned from a data table
 UCharacterState* UCharacterState::CreateGameCharacter(FCharInfo* CharacterInfo, UObject* outer)
 {
 	//creating a new main character state
 	UCharacterState* MainCharacter = NewObject<UCharacterState>(outer);
 
-	//locate assets of characters, looks through DataTables in my DataTables folder for the one containing important character stats and assigns it to characterAssets
+	//locate assets of characters, looks through DataTables in my DataTables folder for the one containing important character stats and assigns it to characterAssets - RIGHT CLICK Data Table copy reference for path
 	UDataTable* characterAssets = Cast<UDataTable>((StaticLoadObject)(UDataTable::StaticClass(), NULL, TEXT(
 		"'DataTable'/Game/DataTable/CharacterStats.CharacterStats'")));
 

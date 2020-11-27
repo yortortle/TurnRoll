@@ -12,5 +12,6 @@ class TURNROLL_API AMyGameMode : public AGameMode
 {
 	GENERATED_BODY()
 
-		AMyGameMode(const class FObjectInitializer& ObjectInitializer);
+	AMyGameMode(const class FObjectInitializer& ObjectInitializer);
+	virtual void BeginPlay() override;
 };

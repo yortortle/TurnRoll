@@ -83,6 +83,9 @@
     <ClInclude Include="..\..\Source\TurnRoll\CharacterState.h">
       <Filter>Source\TurnRoll</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\TurnRoll\MyGameInstance.h">
+      <Filter>Source\TurnRoll</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\TurnRoll\MyActor.cpp">
@@ -104,6 +107,9 @@
       <Filter>Source\TurnRoll</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\TurnRoll\CharacterState.cpp">
+      <Filter>Source\TurnRoll</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TurnRoll\MyGameInstance.cpp">
       <Filter>Source\TurnRoll</Filter>
     </ClCompile>
   </ItemGroup>
