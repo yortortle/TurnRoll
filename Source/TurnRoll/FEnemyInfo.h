@@ -12,21 +12,21 @@ struct FEnemyInfo : public FTableRowBase
 {
     GENERATED_USTRUCT_BODY()
 
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Character Info")
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Enemy Stats")
     FString Enemy_Name;
 
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Character Stats")
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Enemy Stats")
     int Attack;
 
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Character Stats")
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Enemy Stats")
     int Defense;
 
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Character Stats")
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Enemy Stats")
     int CritChance;
 
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Character Stats")
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Enemy Stats")
     FString MainMove;
 
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Character Stats")
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Enemy Stats")
     TArray<FString> MoveSet;
 };

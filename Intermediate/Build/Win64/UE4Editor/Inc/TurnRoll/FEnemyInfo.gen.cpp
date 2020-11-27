@@ -85,7 +85,7 @@ static struct FScriptStruct_TurnRoll_StaticRegisterNativesFEnemyInfo
 	}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FEnemyInfo_Statics::NewProp_MoveSet_MetaData[] = {
-		{ "Category", "Character Stats" },
+		{ "Category", "Enemy Stats" },
 		{ "ModuleRelativePath", "FEnemyInfo.h" },
 	};
 #endif
@@ -93,35 +93,35 @@ static struct FScriptStruct_TurnRoll_StaticRegisterNativesFEnemyInfo
 	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FEnemyInfo_Statics::NewProp_MoveSet_Inner = { "MoveSet", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FEnemyInfo_Statics::NewProp_MainMove_MetaData[] = {
-		{ "Category", "Character Stats" },
+		{ "Category", "Enemy Stats" },
 		{ "ModuleRelativePath", "FEnemyInfo.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FEnemyInfo_Statics::NewProp_MainMove = { "MainMove", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FEnemyInfo, MainMove), METADATA_PARAMS(Z_Construct_UScriptStruct_FEnemyInfo_Statics::NewProp_MainMove_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FEnemyInfo_Statics::NewProp_MainMove_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FEnemyInfo_Statics::NewProp_CritChance_MetaData[] = {
-		{ "Category", "Character Stats" },
+		{ "Category", "Enemy Stats" },
 		{ "ModuleRelativePath", "FEnemyInfo.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UScriptStruct_FEnemyInfo_Statics::NewProp_CritChance = { "CritChance", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FEnemyInfo, CritChance), METADATA_PARAMS(Z_Construct_UScriptStruct_FEnemyInfo_Statics::NewProp_CritChance_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FEnemyInfo_Statics::NewProp_CritChance_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FEnemyInfo_Statics::NewProp_Defense_MetaData[] = {
-		{ "Category", "Character Stats" },
+		{ "Category", "Enemy Stats" },
 		{ "ModuleRelativePath", "FEnemyInfo.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UScriptStruct_FEnemyInfo_Statics::NewProp_Defense = { "Defense", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FEnemyInfo, Defense), METADATA_PARAMS(Z_Construct_UScriptStruct_FEnemyInfo_Statics::NewProp_Defense_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FEnemyInfo_Statics::NewProp_Defense_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FEnemyInfo_Statics::NewProp_Attack_MetaData[] = {
-		{ "Category", "Character Stats" },
+		{ "Category", "Enemy Stats" },
 		{ "ModuleRelativePath", "FEnemyInfo.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UScriptStruct_FEnemyInfo_Statics::NewProp_Attack = { "Attack", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FEnemyInfo, Attack), METADATA_PARAMS(Z_Construct_UScriptStruct_FEnemyInfo_Statics::NewProp_Attack_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FEnemyInfo_Statics::NewProp_Attack_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FEnemyInfo_Statics::NewProp_Enemy_Name_MetaData[] = {
-		{ "Category", "Character Info" },
+		{ "Category", "Enemy Stats" },
 		{ "ModuleRelativePath", "FEnemyInfo.h" },
 	};
 #endif
@@ -163,7 +163,7 @@ static struct FScriptStruct_TurnRoll_StaticRegisterNativesFEnemyInfo
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FEnemyInfo_Hash() { return 3977719957U; }
+	uint32 Get_Z_Construct_UScriptStruct_FEnemyInfo_Hash() { return 1153314303U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)
