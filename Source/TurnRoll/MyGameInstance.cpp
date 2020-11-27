@@ -22,7 +22,7 @@ void UMyGameInstance::Init()
 
 	//locating character assets, makes a udatatable which loads the datatable for my characters
 	UDataTable* party = Cast<UDataTable>(StaticLoadObject(
-		UDataTable::StaticClass(), NULL, TEXT("DataTable'/Game/DataTable/CharacterStats.CharacterStats'")
+		UDataTable::StaticClass(), NULL, TEXT("DataTable'/Game/DataTable/CharacterInfo.CharacterInfo'")
 	));
 
 	if (party == nullptr)
@@ -31,9 +31,17 @@ void UMyGameInstance::Init()
 		return;
 	}
 	 
-	//locate character 
+
+	//debug to check if first data table is working.
+	//FCharacterStats* row = party->FindRow<FCharacterStats>(TEXT(
+		//"C3"), TEXT("LookupCharacterClass"));
+
+	//float f1 = row->Attack;
+	//UE_LOG(LogTemp, Warning, TEXT("%f"), f1);
+
+
 	FCharInfo* row = party->FindRow<FCharInfo>(TEXT(
-		"C3"), TEXT("Lookup Character"));
+		"C1"), TEXT("Lookup Character"));
 
 	if (row == nullptr)
 	{
@@ -41,6 +49,7 @@ void UMyGameInstance::Init()
 		return;
 	}
 
+	//passes in the ID of the party member to create and return a main character
 	this->PartyMembers.Add(UCharacterState::CreateGameCharacter(row, this));
 }
 

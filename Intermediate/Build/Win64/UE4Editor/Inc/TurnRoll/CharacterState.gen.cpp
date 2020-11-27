@@ -86,6 +86,7 @@ void EmptyLinkFunctionForGeneratedCodeCharacterState() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCharacterState_Statics::NewProp_Character_Name_MetaData[] = {
 		{ "Category", "Character Stats" },
 		{ "ModuleRelativePath", "CharacterState.h" },
+		{ "ToolTip", "properties that are written to after being read from the data tables in game instance and run through character state" },
 	};
 #endif
 	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_UCharacterState_Statics::NewProp_Character_Name = { "Character_Name", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UCharacterState, Character_Name), METADATA_PARAMS(Z_Construct_UClass_UCharacterState_Statics::NewProp_Character_Name_MetaData, ARRAY_COUNT(Z_Construct_UClass_UCharacterState_Statics::NewProp_Character_Name_MetaData)) };
@@ -122,7 +123,7 @@ void EmptyLinkFunctionForGeneratedCodeCharacterState() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UCharacterState, 2462435898);
+	IMPLEMENT_CLASS(UCharacterState, 1409307470);
 	template<> TURNROLL_API UClass* StaticClass<UCharacterState>()
 	{
 		return UCharacterState::StaticClass();

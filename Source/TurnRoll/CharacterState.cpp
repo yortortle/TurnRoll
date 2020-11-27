@@ -11,7 +11,7 @@ UCharacterState* UCharacterState::CreateGameCharacter(FCharInfo* CharacterInfo, 
 
 	//locate assets of characters, looks through DataTables in my DataTables folder for the one containing important character stats and assigns it to characterAssets - RIGHT CLICK Data Table copy reference for path
 	UDataTable* characterAssets = Cast<UDataTable>((StaticLoadObject)(UDataTable::StaticClass(), NULL, TEXT(
-		"'DataTable'/Game/DataTable/CharacterStats.CharacterStats'")));
+		"DataTable'/Game/DataTable/CharacterStats.CharacterStats'")));
 
 	//if there are no character assets, log the error.
 	if (characterAssets == nullptr)
@@ -22,6 +22,7 @@ UCharacterState* UCharacterState::CreateGameCharacter(FCharInfo* CharacterInfo, 
 	//if character assets were returned, run this.
 	else
 	{
+		UE_LOG(LogTemp, Warning, TEXT("db found"));
 		//grabs the characters name from the CharacterInfo datatable which contains only the name and the ID
 		MainCharacter->Character_Name = CharacterInfo->Character_Name;
 

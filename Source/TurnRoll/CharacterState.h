@@ -22,6 +22,7 @@ public:
     FCharInfo* CharInfo;
     FCharacterStats* CharacterStats;
 
+    //properties that are written to after being read from the data tables in game instance and run through character state
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Character Stats")
         FString Character_Name;
 
