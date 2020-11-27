@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\TurnRoll.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{DF40C63C-ED30-4A0E-A24E-C60FEC56B5A2}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\TurnRoll.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\TurnRollEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{38A0C3A3-7B74-4977-8E21-BF0D75C6E6FF}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\TurnRoll">
+      <UniqueIdentifier>{878CB931-49FE-4DC9-94B7-D8E6E206DED7}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\TurnRoll\TurnRoll.Build.cs">
+      <Filter>Source\TurnRoll</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\TurnRoll\TurnRoll.cpp">
+      <Filter>Source\TurnRoll</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TurnRoll\TurnRoll.h">
+      <Filter>Source\TurnRoll</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TurnRoll\TurnRollCharacter.cpp">
+      <Filter>Source\TurnRoll</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TurnRoll\TurnRollCharacter.h">
+      <Filter>Source\TurnRoll</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TurnRoll\TurnRollGameMode.cpp">
+      <Filter>Source\TurnRoll</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TurnRoll\TurnRollGameMode.h">
+      <Filter>Source\TurnRoll</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

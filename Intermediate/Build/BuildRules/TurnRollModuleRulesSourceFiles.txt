@@ -1,0 +1,3 @@
+C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Source\TurnRoll\TurnRoll.Build.cs
+C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Source\TurnRoll.Target.cs
+C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Source\TurnRollEditor.Target.cs
