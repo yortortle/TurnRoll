@@ -573,9 +573,11 @@
     <None Include="..\..\Config\DefaultInput.ini" />
     <ClCompile Include="..\..\Source\TurnRoll\MainCharacter.cpp" />
     <ClCompile Include="..\..\Source\TurnRoll\MyActor.cpp" />
+    <ClCompile Include="..\..\Source\TurnRoll\MyGameMode.cpp" />
     <ClCompile Include="..\..\Source\TurnRoll\StructName.cpp" />
     <ClInclude Include="..\..\Source\TurnRoll\MainCharacter.h" />
     <ClInclude Include="..\..\Source\TurnRoll\MyActor.h" />
+    <ClInclude Include="..\..\Source\TurnRoll\MyGameMode.h" />
     <ClInclude Include="..\..\Source\TurnRoll\StructName.h" />
     <None Include="..\..\Source\TurnRoll\TurnRoll.Build.cs" />
     <ClCompile Include="..\..\Source\TurnRoll\TurnRoll.cpp" />
