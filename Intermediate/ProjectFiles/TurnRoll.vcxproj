@@ -571,6 +571,7 @@
     <None Include="..\..\Config\DefaultEngine.ini" />
     <None Include="..\..\Config\DefaultGame.ini" />
     <None Include="..\..\Config\DefaultInput.ini" />
+    <ClCompile Include="..\..\Source\TurnRoll\CharacterState.cpp" />
     <ClCompile Include="..\..\Source\TurnRoll\CharacterStats.cpp" />
     <ClCompile Include="..\..\Source\TurnRoll\FCharInfo.cpp" />
     <ClCompile Include="..\..\Source\TurnRoll\FEnemyInfo.cpp" />
@@ -578,6 +579,7 @@
     <ClCompile Include="..\..\Source\TurnRoll\MyActor.cpp" />
     <ClCompile Include="..\..\Source\TurnRoll\MyGameMode.cpp" />
     <ClCompile Include="..\..\Source\TurnRoll\StructName.cpp" />
+    <ClInclude Include="..\..\Source\TurnRoll\CharacterState.h" />
     <ClInclude Include="..\..\Source\TurnRoll\CharacterStats.h" />
     <ClInclude Include="..\..\Source\TurnRoll\FCharInfo.h" />
     <ClInclude Include="..\..\Source\TurnRoll\FEnemyInfo.h" />
