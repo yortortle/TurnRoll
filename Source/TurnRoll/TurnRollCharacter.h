@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "Engine/DataTable.h"
+#include "StructName.h"
 #include "TurnRollCharacter.generated.h"
 
 UCLASS(config=Game)
@@ -20,6 +22,13 @@ class ATurnRollCharacter : public ACharacter
 	class UCameraComponent* FollowCamera;
 public:
 	ATurnRollCharacter();
+
+	virtual void BeginPlay() override;
+
+	public:
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UDataTable * DataTable;
+
 
 	/** Base turn rate, in deg/sec. Other scaling may affect final turn rate. */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)

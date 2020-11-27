@@ -47,6 +47,17 @@ ATurnRollCharacter::ATurnRollCharacter()
 	// are set in the derived blueprint asset named MyCharacter (to avoid direct content references in C++)
 }
 
+void ATurnRollCharacter::BeginPlay()
+{
+	if (DataTable != NULL)
+	{
+		FStructTest* row = DataTable->FindRow<FStructTest>(
+			TEXT("3"), TEXT(" LookupTestCustomData"));
+		FString someString = row->SomeString;
+		UE_LOG(LogTemp, Warning, TEXT("%s"), *someString);
+	}
+}
+
 //////////////////////////////////////////////////////////////////////////
 // Input
 

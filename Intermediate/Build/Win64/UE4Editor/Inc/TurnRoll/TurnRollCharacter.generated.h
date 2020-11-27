@@ -13,9 +13,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define TURNROLL_TurnRollCharacter_generated_h
 
-#define TurnRoll_Source_TurnRoll_TurnRollCharacter_h_12_RPC_WRAPPERS
-#define TurnRoll_Source_TurnRoll_TurnRollCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS
-#define TurnRoll_Source_TurnRoll_TurnRollCharacter_h_12_INCLASS_NO_PURE_DECLS \
+#define TurnRoll_Source_TurnRoll_TurnRollCharacter_h_14_RPC_WRAPPERS
+#define TurnRoll_Source_TurnRoll_TurnRollCharacter_h_14_RPC_WRAPPERS_NO_PURE_DECLS
+#define TurnRoll_Source_TurnRoll_TurnRollCharacter_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesATurnRollCharacter(); \
 	friend struct Z_Construct_UClass_ATurnRollCharacter_Statics; \
@@ -24,7 +24,7 @@ public: \
 	DECLARE_SERIALIZER(ATurnRollCharacter)
 
 
-#define TurnRoll_Source_TurnRoll_TurnRollCharacter_h_12_INCLASS \
+#define TurnRoll_Source_TurnRoll_TurnRollCharacter_h_14_INCLASS \
 private: \
 	static void StaticRegisterNativesATurnRollCharacter(); \
 	friend struct Z_Construct_UClass_ATurnRollCharacter_Statics; \
@@ -33,7 +33,7 @@ public: \
 	DECLARE_SERIALIZER(ATurnRollCharacter)
 
 
-#define TurnRoll_Source_TurnRoll_TurnRollCharacter_h_12_STANDARD_CONSTRUCTORS \
+#define TurnRoll_Source_TurnRoll_TurnRollCharacter_h_14_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ATurnRollCharacter(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ATurnRollCharacter) \
@@ -46,7 +46,7 @@ private: \
 public:
 
 
-#define TurnRoll_Source_TurnRoll_TurnRollCharacter_h_12_ENHANCED_CONSTRUCTORS \
+#define TurnRoll_Source_TurnRoll_TurnRollCharacter_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ATurnRollCharacter(ATurnRollCharacter&&); \
@@ -57,30 +57,30 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ATurnRollCharacter); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ATurnRollCharacter)
 
 
-#define TurnRoll_Source_TurnRoll_TurnRollCharacter_h_12_PRIVATE_PROPERTY_OFFSET \
+#define TurnRoll_Source_TurnRoll_TurnRollCharacter_h_14_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__CameraBoom() { return STRUCT_OFFSET(ATurnRollCharacter, CameraBoom); } \
 	FORCEINLINE static uint32 __PPO__FollowCamera() { return STRUCT_OFFSET(ATurnRollCharacter, FollowCamera); }
 
 
-#define TurnRoll_Source_TurnRoll_TurnRollCharacter_h_9_PROLOG
-#define TurnRoll_Source_TurnRoll_TurnRollCharacter_h_12_GENERATED_BODY_LEGACY \
+#define TurnRoll_Source_TurnRoll_TurnRollCharacter_h_11_PROLOG
+#define TurnRoll_Source_TurnRoll_TurnRollCharacter_h_14_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	TurnRoll_Source_TurnRoll_TurnRollCharacter_h_12_PRIVATE_PROPERTY_OFFSET \
-	TurnRoll_Source_TurnRoll_TurnRollCharacter_h_12_RPC_WRAPPERS \
-	TurnRoll_Source_TurnRoll_TurnRollCharacter_h_12_INCLASS \
-	TurnRoll_Source_TurnRoll_TurnRollCharacter_h_12_STANDARD_CONSTRUCTORS \
+	TurnRoll_Source_TurnRoll_TurnRollCharacter_h_14_PRIVATE_PROPERTY_OFFSET \
+	TurnRoll_Source_TurnRoll_TurnRollCharacter_h_14_RPC_WRAPPERS \
+	TurnRoll_Source_TurnRoll_TurnRollCharacter_h_14_INCLASS \
+	TurnRoll_Source_TurnRoll_TurnRollCharacter_h_14_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define TurnRoll_Source_TurnRoll_TurnRollCharacter_h_12_GENERATED_BODY \
+#define TurnRoll_Source_TurnRoll_TurnRollCharacter_h_14_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	TurnRoll_Source_TurnRoll_TurnRollCharacter_h_12_PRIVATE_PROPERTY_OFFSET \
-	TurnRoll_Source_TurnRoll_TurnRollCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
-	TurnRoll_Source_TurnRoll_TurnRollCharacter_h_12_INCLASS_NO_PURE_DECLS \
-	TurnRoll_Source_TurnRoll_TurnRollCharacter_h_12_ENHANCED_CONSTRUCTORS \
+	TurnRoll_Source_TurnRoll_TurnRollCharacter_h_14_PRIVATE_PROPERTY_OFFSET \
+	TurnRoll_Source_TurnRoll_TurnRollCharacter_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	TurnRoll_Source_TurnRoll_TurnRollCharacter_h_14_INCLASS_NO_PURE_DECLS \
+	TurnRoll_Source_TurnRoll_TurnRollCharacter_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

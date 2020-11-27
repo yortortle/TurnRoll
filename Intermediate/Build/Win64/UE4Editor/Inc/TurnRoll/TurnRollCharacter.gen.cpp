@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeTurnRollCharacter() {}
 	TURNROLL_API UClass* Z_Construct_UClass_ATurnRollCharacter();
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 	UPackage* Z_Construct_UPackage__Script_TurnRoll();
+	ENGINE_API UClass* Z_Construct_UClass_UDataTable_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 // End Cross Module References
@@ -41,6 +42,10 @@ void EmptyLinkFunctionForGeneratedCodeTurnRollCharacter() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BaseTurnRate_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_BaseTurnRate;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DataTable_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_DataTable;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FollowCamera_MetaData[];
 #endif
@@ -81,6 +86,13 @@ void EmptyLinkFunctionForGeneratedCodeTurnRollCharacter() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ATurnRollCharacter_Statics::NewProp_BaseTurnRate = { "BaseTurnRate", nullptr, (EPropertyFlags)0x0010000000020015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATurnRollCharacter, BaseTurnRate), METADATA_PARAMS(Z_Construct_UClass_ATurnRollCharacter_Statics::NewProp_BaseTurnRate_MetaData, ARRAY_COUNT(Z_Construct_UClass_ATurnRollCharacter_Statics::NewProp_BaseTurnRate_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATurnRollCharacter_Statics::NewProp_DataTable_MetaData[] = {
+		{ "Category", "TurnRollCharacter" },
+		{ "ModuleRelativePath", "TurnRollCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATurnRollCharacter_Statics::NewProp_DataTable = { "DataTable", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATurnRollCharacter, DataTable), Z_Construct_UClass_UDataTable_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATurnRollCharacter_Statics::NewProp_DataTable_MetaData, ARRAY_COUNT(Z_Construct_UClass_ATurnRollCharacter_Statics::NewProp_DataTable_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATurnRollCharacter_Statics::NewProp_FollowCamera_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Camera" },
@@ -103,6 +115,7 @@ void EmptyLinkFunctionForGeneratedCodeTurnRollCharacter() {}
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ATurnRollCharacter_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATurnRollCharacter_Statics::NewProp_BaseLookUpRate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATurnRollCharacter_Statics::NewProp_BaseTurnRate,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATurnRollCharacter_Statics::NewProp_DataTable,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATurnRollCharacter_Statics::NewProp_FollowCamera,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATurnRollCharacter_Statics::NewProp_CameraBoom,
 	};
@@ -133,7 +146,7 @@ void EmptyLinkFunctionForGeneratedCodeTurnRollCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATurnRollCharacter, 1371979121);
+	IMPLEMENT_CLASS(ATurnRollCharacter, 890668740);
 	template<> TURNROLL_API UClass* StaticClass<ATurnRollCharacter>()
 	{
 		return ATurnRollCharacter::StaticClass();
