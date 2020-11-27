@@ -41,7 +41,7 @@ void UMyGameInstance::Init()
 
 
 	FCharInfo* row = party->FindRow<FCharInfo>(TEXT(
-		"C1"), TEXT("Lookup Character"));
+		"C3"), TEXT("Lookup Character"));
 
 	if (row == nullptr)
 	{
@@ -49,7 +49,10 @@ void UMyGameInstance::Init()
 		return;
 	}
 
-	//passes in the ID of the party member to create and return a main character
+	//passes in the ID of the party member to create and return a main character into the TArray PartyMembers
 	this->PartyMembers.Add(UCharacterState::CreateGameCharacter(row, this));
+	UCharacterState* obj = UCharacterState::CreateGameCharacter(row, this);
+	float test = obj->Attack;
+	UE_LOG(LogTemp, Warning, TEXT("%f"), test);
 }
 

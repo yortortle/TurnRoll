@@ -19,6 +19,7 @@ class TURNROLL_API UCharacterState : public UObject
 
 public:
 
+    //this class is basically a factory which generates main character objects with various stats and returns them to a TArray in the game instance
     FCharInfo* CharInfo;
     FCharacterStats* CharacterStats;
 

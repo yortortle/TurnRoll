@@ -3,7 +3,7 @@
 /MACHINE:x64
 /SUBSYSTEM:WINDOWS
 /DEF
-/NAME:"UE4Editor-TurnRoll-0037.dll"
+/NAME:"UE4Editor-TurnRoll-0048.dll"
 /IGNORE:4221
 /NODEFAULTLIB
 "C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\TurnRollEditor\Development\Engine\SharedPCH.Engine.h.obj"
@@ -32,5 +32,5 @@
 "C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\TurnRollCharacter.gen.cpp.obj"
 "C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\TurnRollGameMode.gen.cpp.obj"
 "C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\Default.rc2.res"
-/OUT:"C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\UE4Editor-TurnRoll-0037.lib"
+/OUT:"C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\UE4Editor-TurnRoll-0048.lib"
 /INCLUDE:IMPLEMENT_MODULE_TurnRoll
