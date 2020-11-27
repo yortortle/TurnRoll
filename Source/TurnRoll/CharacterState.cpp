@@ -45,3 +45,8 @@ void UCharacterState::BeginDestroy()
 {
 	Super::BeginDestroy();
 }
+
+void UCharacterState::GetStats()
+{
+}
+;

@@ -87,6 +87,7 @@ static struct FScriptStruct_TurnRoll_StaticRegisterNativesFCharacterStats
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FCharacterStats_Statics::NewProp_MoveSet_MetaData[] = {
 		{ "Category", "Character Stats" },
 		{ "ModuleRelativePath", "CharacterStats.h" },
+		{ "ToolTip", "UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = \"Character Stats\")\nFString Proficiency;" },
 	};
 #endif
 	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FCharacterStats_Statics::NewProp_MoveSet = { "MoveSet", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FCharacterStats, MoveSet), METADATA_PARAMS(Z_Construct_UScriptStruct_FCharacterStats_Statics::NewProp_MoveSet_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FCharacterStats_Statics::NewProp_MoveSet_MetaData)) };
@@ -163,7 +164,7 @@ static struct FScriptStruct_TurnRoll_StaticRegisterNativesFCharacterStats
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FCharacterStats_Hash() { return 3885221528U; }
+	uint32 Get_Z_Construct_UScriptStruct_FCharacterStats_Hash() { return 242464773U; }
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER
 #pragma warning (pop)

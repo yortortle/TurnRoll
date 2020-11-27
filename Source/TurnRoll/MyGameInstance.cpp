@@ -40,19 +40,46 @@ void UMyGameInstance::Init()
 	//UE_LOG(LogTemp, Warning, TEXT("%f"), f1);
 
 
-	FCharInfo* row = party->FindRow<FCharInfo>(TEXT(
+	FCharInfo* char1 = party->FindRow<FCharInfo>(TEXT(
+		"C1"), TEXT("Lookup Character"));
+	FCharInfo* char2 = party->FindRow<FCharInfo>(TEXT(
 		"C3"), TEXT("Lookup Character"));
+	FCharInfo* char3 = party->FindRow<FCharInfo>(TEXT(
+		"C4"), TEXT("Lookup Character"));
+	FCharInfo* char4 = party->FindRow<FCharInfo>(TEXT(
+		"C5"), TEXT("Lookup Character"));
 
-	if (row == nullptr)
+	if (char1 == nullptr)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Character ID 'C3' not found!"));
+		return;
+	}
+	if (char2 == nullptr)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Character ID 'C3' not found!"));
+		return;
+	}
+	if (char3 == nullptr)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Character ID 'C3' not found!"));
+		return;
+	}
+	if (char4 == nullptr)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Character ID 'C3' not found!"));
 		return;
 	}
 
 	//passes in the ID of the party member to create and return a main character into the TArray PartyMembers
-	this->PartyMembers.Add(UCharacterState::CreateGameCharacter(row, this));
-	UCharacterState* obj = UCharacterState::CreateGameCharacter(row, this);
-	float test = obj->Attack;
-	UE_LOG(LogTemp, Warning, TEXT("%f"), test);
+	this->PartyMembers.Add(UCharacterState::CreateGameCharacter(char1, this));
+	this->PartyMembers.Add(UCharacterState::CreateGameCharacter(char2, this));
+	this->PartyMembers.Add(UCharacterState::CreateGameCharacter(char3, this));
+	this->PartyMembers.Add(UCharacterState::CreateGameCharacter(char4, this));
+
+
+	//testing output of returned object
+	//UCharacterState* obj = UCharacterState::CreateGameCharacter(row, this);
+	//float test = obj->Attack;
+	//UE_LOG(LogTemp, Warning, TEXT("%f"), test);
 }
 

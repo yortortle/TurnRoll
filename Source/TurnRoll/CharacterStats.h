@@ -30,6 +30,9 @@ struct FCharacterStats : public FTableRowBase
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Character Stats")
     FString MainMove;
 
+    //UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Character Stats")
+    //FString Proficiency;
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Character Stats")
     TArray<FString> MoveSet;
 };
