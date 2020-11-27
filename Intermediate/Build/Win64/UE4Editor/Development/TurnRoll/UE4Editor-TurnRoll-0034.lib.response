@@ -7,6 +7,7 @@
 /IGNORE:4221
 /NODEFAULTLIB
 "C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\TurnRollEditor\Development\Engine\SharedPCH.Engine.h.obj"
+"C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\CharacterStats.cpp.obj"
 "C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\MainCharacter.cpp.obj"
 "C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\MyActor.cpp.obj"
 "C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\MyGameMode.cpp.obj"
@@ -14,6 +15,7 @@
 "C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\TurnRoll.cpp.obj"
 "C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\TurnRollCharacter.cpp.obj"
 "C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\TurnRollGameMode.cpp.obj"
+"C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\CharacterStats.gen.cpp.obj"
 "C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\MainCharacter.gen.cpp.obj"
 "C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\MyActor.gen.cpp.obj"
 "C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\MyGameMode.gen.cpp.obj"
