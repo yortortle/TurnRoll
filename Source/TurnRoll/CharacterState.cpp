@@ -41,6 +41,7 @@ UCharacterState* UCharacterState::CreateGameCharacter(FCharInfo* CharacterInfo, 
 		MainCharacter->CritChance = MainCharacter->CharacterStats->CritChance;
 	}
 
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Orange, FString::Printf(TEXT("Loaded: %s"), *MainCharacter->Character_Name));
 	return MainCharacter;
 }
 
@@ -51,5 +52,5 @@ void UCharacterState::BeginDestroy()
 
 void UCharacterState::GetStats()
 {
-	//printFString(("Name"), Character_Name);
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Orange, FString::Printf(TEXT("My Location is: %s"), *Character_Name));
 }
