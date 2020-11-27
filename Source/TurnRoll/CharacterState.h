@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "FCharInfo.h"
+#include "Engine.h"
 #include "CharacterStats.h"
 
 #include "CharacterState.generated.h"
@@ -42,4 +43,5 @@ public:
 
 public:
     void BeginDestroy() override;
+    void GetStats();
 };

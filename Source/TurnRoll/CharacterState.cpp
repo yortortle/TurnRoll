@@ -1,3 +1,6 @@
+#define print(text) if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 1.5, FColor::Green,text)
+#define printFString(text, fstring) if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Magenta, FString::Printf(TEXT(text), fstring)
+
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "CharacterState.h"
@@ -48,5 +51,5 @@ void UCharacterState::BeginDestroy()
 
 void UCharacterState::GetStats()
 {
+	//printFString(("Name"), Character_Name);
 }
-;
