@@ -31,13 +31,13 @@ void UMyGameInstance::Init()
 		return;
 	}
 	 
-	//locate character ID
+	//locate character 
 	FCharInfo* row = party->FindRow<FCharInfo>(TEXT(
-		"C1"), TEXT("Lookup Character"));
+		"C3"), TEXT("Lookup Character"));
 
 	if (row == nullptr)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Character ID 'C1' not found!"));
+		UE_LOG(LogTemp, Warning, TEXT("Character ID 'C3' not found!"));
 		return;
 	}
 
