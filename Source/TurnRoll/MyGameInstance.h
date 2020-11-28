@@ -17,9 +17,12 @@ class TURNROLL_API UMyGameInstance : public UGameInstance
 
 public:
 	//array to store the party members loaded
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Game Data")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Instance Data")
 	TArray<UCharacterState*> PartyMembers;
 	
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Instance Data")
+	bool InteractNPC;
+
 protected:
 	bool isInitialized;
 
