@@ -33,6 +33,10 @@ void EmptyLinkFunctionForGeneratedCodeMyGameInstance() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Gold_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Gold;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InteractNPC_MetaData[];
 #endif
 		static void NewProp_InteractNPC_SetBit(void* Obj);
@@ -63,6 +67,13 @@ void EmptyLinkFunctionForGeneratedCodeMyGameInstance() {}
 	};
 #endif
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMyGameInstance_Statics::NewProp_Gold_MetaData[] = {
+		{ "Category", "Instance Data" },
+		{ "ModuleRelativePath", "MyGameInstance.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UMyGameInstance_Statics::NewProp_Gold = { "Gold", nullptr, (EPropertyFlags)0x0010000000010005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMyGameInstance, Gold), METADATA_PARAMS(Z_Construct_UClass_UMyGameInstance_Statics::NewProp_Gold_MetaData, ARRAY_COUNT(Z_Construct_UClass_UMyGameInstance_Statics::NewProp_Gold_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMyGameInstance_Statics::NewProp_InteractNPC_MetaData[] = {
 		{ "Category", "Instance Data" },
 		{ "ModuleRelativePath", "MyGameInstance.h" },
@@ -91,6 +102,7 @@ void EmptyLinkFunctionForGeneratedCodeMyGameInstance() {}
 	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UMyGameInstance_Statics::NewProp_PartyMembers = { "PartyMembers", nullptr, (EPropertyFlags)0x0010000000010015, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMyGameInstance, PartyMembers), METADATA_PARAMS(Z_Construct_UClass_UMyGameInstance_Statics::NewProp_PartyMembers_MetaData, ARRAY_COUNT(Z_Construct_UClass_UMyGameInstance_Statics::NewProp_PartyMembers_MetaData)) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UMyGameInstance_Statics::NewProp_PartyMembers_Inner = { "PartyMembers", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_UCharacterState_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UMyGameInstance_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyGameInstance_Statics::NewProp_Gold,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyGameInstance_Statics::NewProp_InteractNPC,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyGameInstance_Statics::NewProp_FullParty,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyGameInstance_Statics::NewProp_FullParty_Inner,
@@ -124,7 +136,7 @@ void EmptyLinkFunctionForGeneratedCodeMyGameInstance() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UMyGameInstance, 3716326244);
+	IMPLEMENT_CLASS(UMyGameInstance, 2991457480);
 	template<> TURNROLL_API UClass* StaticClass<UMyGameInstance>()
 	{
 		return UMyGameInstance::StaticClass();

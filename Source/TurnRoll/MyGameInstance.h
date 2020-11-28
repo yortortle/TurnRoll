@@ -26,6 +26,9 @@ public:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Instance Data")
 	bool InteractNPC;
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Instance Data")
+	float Gold = 25.0f;
+
 protected:
 	bool isInitialized;
 
