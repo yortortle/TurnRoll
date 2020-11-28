@@ -28,5 +28,4 @@ protected:
 
 public:
 	void Init();
-
 };
