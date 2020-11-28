@@ -57,7 +57,9 @@ void EmptyLinkFunctionForGeneratedCodeCharacterState() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCharacterState_Statics::Class_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
 		{ "IncludePath", "CharacterState.h" },
+		{ "IsBlueprintBase", "true" },
 		{ "ModuleRelativePath", "CharacterState.h" },
 	};
 #endif
@@ -123,7 +125,7 @@ void EmptyLinkFunctionForGeneratedCodeCharacterState() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UCharacterState, 1409307470);
+	IMPLEMENT_CLASS(UCharacterState, 1278143576);
 	template<> TURNROLL_API UClass* StaticClass<UCharacterState>()
 	{
 		return UCharacterState::StaticClass();

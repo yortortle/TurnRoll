@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\TurnRoll.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{8FEE5EE9-6074-43B6-91B7-8BA25D8FBB12}</UniqueIdentifier>
+      <UniqueIdentifier>{368C1610-2D8D-42F6-A641-03E1E428BE29}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\TurnRoll.Target.cs">
       <Filter>Source</Filter>
@@ -13,7 +13,7 @@
     </None>
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{F234DDC0-AB1D-47EC-BF9E-3C4819DF9733}</UniqueIdentifier>
+      <UniqueIdentifier>{1B73ABB0-8241-41D6-8231-EAE13C0EF7BE}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -31,8 +31,56 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\TurnRoll">
-      <UniqueIdentifier>{FB316EC2-3CFE-4FFD-92E4-9EBEAA358CDA}</UniqueIdentifier>
+      <UniqueIdentifier>{B667ADB1-CA32-4BF0-B466-BEBD91B7C59A}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\TurnRoll\CharacterState.cpp">
+      <Filter>Source\TurnRoll</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TurnRoll\CharacterState.h">
+      <Filter>Source\TurnRoll</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TurnRoll\CharacterStats.cpp">
+      <Filter>Source\TurnRoll</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TurnRoll\CharacterStats.h">
+      <Filter>Source\TurnRoll</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TurnRoll\FCharInfo.cpp">
+      <Filter>Source\TurnRoll</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TurnRoll\FCharInfo.h">
+      <Filter>Source\TurnRoll</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TurnRoll\FEnemyInfo.cpp">
+      <Filter>Source\TurnRoll</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TurnRoll\FEnemyInfo.h">
+      <Filter>Source\TurnRoll</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TurnRoll\MainCharacter.cpp">
+      <Filter>Source\TurnRoll</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TurnRoll\MainCharacter.h">
+      <Filter>Source\TurnRoll</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TurnRoll\MyActor.cpp">
+      <Filter>Source\TurnRoll</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TurnRoll\MyActor.h">
+      <Filter>Source\TurnRoll</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TurnRoll\MyGameInstance.cpp">
+      <Filter>Source\TurnRoll</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TurnRoll\MyGameInstance.h">
+      <Filter>Source\TurnRoll</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TurnRoll\MyGameMode.cpp">
+      <Filter>Source\TurnRoll</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TurnRoll\MyGameMode.h">
+      <Filter>Source\TurnRoll</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\TurnRoll\StructName.cpp">
       <Filter>Source\TurnRoll</Filter>
     </ClCompile>
@@ -60,57 +108,5 @@
     <ClInclude Include="..\..\Source\TurnRoll\TurnRollGameMode.h">
       <Filter>Source\TurnRoll</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\Source\TurnRoll\MyActor.h">
-      <Filter>Source\TurnRoll</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\TurnRoll\MainCharacter.h">
-      <Filter>Source\TurnRoll</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\TurnRoll\MyGameMode.h">
-      <Filter>Source\TurnRoll</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\TurnRoll\CharacterStats.h">
-      <Filter>Source\TurnRoll</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\TurnRoll\FCharInfo.h">
-      <Filter>Source\TurnRoll</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\TurnRoll\FEnemyInfo.h">
-      <Filter>Source\TurnRoll</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\TurnRoll\CharacterState.h">
-      <Filter>Source\TurnRoll</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\TurnRoll\MyGameInstance.h">
-      <Filter>Source\TurnRoll</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\Source\TurnRoll\MyActor.cpp">
-      <Filter>Source\TurnRoll</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\TurnRoll\MainCharacter.cpp">
-      <Filter>Source\TurnRoll</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\TurnRoll\MyGameMode.cpp">
-      <Filter>Source\TurnRoll</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\TurnRoll\CharacterStats.cpp">
-      <Filter>Source\TurnRoll</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\TurnRoll\FCharInfo.cpp">
-      <Filter>Source\TurnRoll</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\TurnRoll\FEnemyInfo.cpp">
-      <Filter>Source\TurnRoll</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\TurnRoll\CharacterState.cpp">
-      <Filter>Source\TurnRoll</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\TurnRoll\MyGameInstance.cpp">
-      <Filter>Source\TurnRoll</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>

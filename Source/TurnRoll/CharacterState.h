@@ -13,7 +13,7 @@
 /**
  * 
  */
-UCLASS()
+UCLASS(Blueprintable)
 class TURNROLL_API UCharacterState : public UObject
 {
 	GENERATED_BODY()
