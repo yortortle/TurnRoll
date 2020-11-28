@@ -11,13 +11,17 @@ ANPCMerchant::ANPCMerchant()
 
 	BoxCollision = CreateDefaultSubobject<UBoxComponent>(TEXT("Overlap box"));
 	BoxCollision->AttachTo(RootComponent);
-	BoxCollision->OnComponentBeginOverlap.AddDynamic(this, &ANPCMerchant::OnOverLapBegin);
 }
 
 // Called when the game starts or when spawned
 void ANPCMerchant::BeginPlay()
 {
 	Super::BeginPlay();
+
+	GameInstance = Cast<UMyGameInstance>(UGameplayStatics::GetGameInstance(GetWorld()));
+
+	BoxCollision->OnComponentBeginOverlap.AddDynamic(this, &ANPCMerchant::OnOverLapBegins);
+    BoxCollision->OnComponentEndOverlap.AddDynamic(this, &ANPCMerchant::OnOverLapEnd);
 
 	UE_LOG(LogTemp, Warning, TEXT("NPC Begin Play"));
 }
@@ -35,7 +39,16 @@ void ANPCMerchant::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 }
 
-void ANPCMerchant::OnOverLapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+void ANPCMerchant::OnOverLapBegins(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	UE_LOG(LogTemp, Warning, TEXT("Overlap"));
+	GameInstance->InteractNPC = true;
+	UE_LOG(LogTemp, Warning, TEXT("Overlap Begins2"));
+	UE_LOG(LogTemp, Warning, TEXT("Overlap Begins3"));
 }
+
+void ANPCMerchant::OnOverLapEnd(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
+{
+	GameInstance->InteractNPC = false;
+	UE_LOG(LogTemp, Warning, TEXT("Overlap Ends"));
+}
+
