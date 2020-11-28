@@ -109,4 +109,14 @@
       <Filter>Source\TurnRoll</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\TurnRoll\NPCMerchant.h">
+      <Filter>Source\TurnRoll</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\TurnRoll\NPCMerchant.cpp">
+      <Filter>Source\TurnRoll</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>
