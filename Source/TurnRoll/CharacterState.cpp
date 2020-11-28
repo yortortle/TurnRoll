@@ -39,6 +39,7 @@ UCharacterState* UCharacterState::CreateGameCharacter(FCharInfo* CharacterInfo, 
 		MainCharacter->Attack = MainCharacter->CharacterStats->Attack;
 		MainCharacter->Defense = MainCharacter->CharacterStats->Defense;
 		MainCharacter->CritChance = MainCharacter->CharacterStats->CritChance;
+		MainCharacter->Main_Move = MainCharacter->CharacterStats->MainMove;
 	}
 
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Orange, FString::Printf(TEXT("Loaded: %s"), *MainCharacter->Character_Name));

@@ -44,6 +44,10 @@ void EmptyLinkFunctionForGeneratedCodeCharacterState() {}
 #endif
 		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_Attack;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Main_Move_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_Main_Move;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Character_Name_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStrPropertyParams NewProp_Character_Name;
@@ -85,6 +89,13 @@ void EmptyLinkFunctionForGeneratedCodeCharacterState() {}
 #endif
 	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_UCharacterState_Statics::NewProp_Attack = { "Attack", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UCharacterState, Attack), METADATA_PARAMS(Z_Construct_UClass_UCharacterState_Statics::NewProp_Attack_MetaData, ARRAY_COUNT(Z_Construct_UClass_UCharacterState_Statics::NewProp_Attack_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCharacterState_Statics::NewProp_Main_Move_MetaData[] = {
+		{ "Category", "Character Stats" },
+		{ "ModuleRelativePath", "CharacterState.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_UCharacterState_Statics::NewProp_Main_Move = { "Main_Move", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UCharacterState, Main_Move), METADATA_PARAMS(Z_Construct_UClass_UCharacterState_Statics::NewProp_Main_Move_MetaData, ARRAY_COUNT(Z_Construct_UClass_UCharacterState_Statics::NewProp_Main_Move_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCharacterState_Statics::NewProp_Character_Name_MetaData[] = {
 		{ "Category", "Character Stats" },
 		{ "ModuleRelativePath", "CharacterState.h" },
@@ -96,6 +107,7 @@ void EmptyLinkFunctionForGeneratedCodeCharacterState() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCharacterState_Statics::NewProp_CritChance,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCharacterState_Statics::NewProp_Defense,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCharacterState_Statics::NewProp_Attack,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCharacterState_Statics::NewProp_Main_Move,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCharacterState_Statics::NewProp_Character_Name,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UCharacterState_Statics::StaticCppClassTypeInfo = {
@@ -125,7 +137,7 @@ void EmptyLinkFunctionForGeneratedCodeCharacterState() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UCharacterState, 1278143576);
+	IMPLEMENT_CLASS(UCharacterState, 2316250443);
 	template<> TURNROLL_API UClass* StaticClass<UCharacterState>()
 	{
 		return UCharacterState::StaticClass();

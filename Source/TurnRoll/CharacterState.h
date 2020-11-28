@@ -29,6 +29,9 @@ public:
         FString Character_Name;
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Character Stats")
+        FString Main_Move;
+
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Character Stats")
         int Attack;
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Character Stats")
