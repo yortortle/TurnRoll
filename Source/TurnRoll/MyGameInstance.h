@@ -16,6 +16,7 @@ class TURNROLL_API UMyGameInstance : public UGameInstance
 	UMyGameInstance(const class FObjectInitializer& ObjectInitializer);
 
 public:
+	//array to store the party members loaded
 	TArray<UCharacterState*> PartyMembers;
 	
 protected:

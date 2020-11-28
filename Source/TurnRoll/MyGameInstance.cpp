@@ -9,6 +9,11 @@ UMyGameInstance::UMyGameInstance(const class FObjectInitializer& ObjectInitializ
 	isInitialized = false;
 }
 
+//probably have a 'loaded' object that is determined from pressing a button in here, aka it will load the object using findrow probably and then that object will be qued for the 'switch character' function which will probably just destroy the current
+//actor and then spawn another at the same location. The actosr will probably all inherit from main character in some way.
+//maybe have a button that updates the game instance with a variable and then checks conditionals and loads the proper character from the partyarray, returns that object, and then the spawn function will run
+//have a UI in your house to select characters to have in your party, maybe like switching out the buttons basically. this seems hard.
+
 
 void UMyGameInstance::Init()
 {

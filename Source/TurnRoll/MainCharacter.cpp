@@ -63,6 +63,20 @@ void AMainCharacter::SetupPlayerInputComponent(class UInputComponent* InputCompo
     //mouse vs joystick / touch
     InputComponent->BindAxis("Turn", this, &APawn::AddControllerYawInput);
     InputComponent->BindAxis("TurnRate", this, &AMainCharacter::TurnAtRate);
+
+    InputComponent->BindTouch(IE_Pressed, this, &AMainCharacter::TouchStarted);
+    InputComponent->BindTouch(IE_Released, this, &AMainCharacter::TouchStopped);
+
+}
+
+void AMainCharacter::TouchStarted(ETouchIndex::Type FingerIndex, FVector Location)
+{
+    UE_LOG(LogTemp, Warning, TEXT("touch input"));
+}
+
+void AMainCharacter::TouchStopped(ETouchIndex::Type FingerIndex, FVector Location)
+{
+    UE_LOG(LogTemp, Warning, TEXT("touch input released"));
 }
 
 void AMainCharacter::TurnAtRate(float Rate)

@@ -34,6 +34,13 @@ protected:
     //rate chracter is turned
     void TurnAtRate(float Rate);
 
+    /** Handler for when a touch input begins. */
+    void TouchStarted(ETouchIndex::Type FingerIndex, FVector Location);
+
+    /** Handler for when a touch input stops. */
+    void TouchStopped(ETouchIndex::Type FingerIndex, FVector Location);
+
+
     //set up player component inputs to override
     virtual void SetupPlayerInputComponent (class UInputComponent* InputComponent) override;
 
