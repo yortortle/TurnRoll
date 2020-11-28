@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeMyGameInstance() {}
 	TURNROLL_API UClass* Z_Construct_UClass_UMyGameInstance();
 	ENGINE_API UClass* Z_Construct_UClass_UGameInstance();
 	UPackage* Z_Construct_UPackage__Script_TurnRoll();
+	TURNROLL_API UClass* Z_Construct_UClass_UCharacterState_NoRegister();
 // End Cross Module References
 	void UMyGameInstance::StaticRegisterNativesUMyGameInstance()
 	{
@@ -31,6 +32,12 @@ void EmptyLinkFunctionForGeneratedCodeMyGameInstance() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PartyMembers_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_PartyMembers;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_PartyMembers_Inner;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -45,6 +52,19 @@ void EmptyLinkFunctionForGeneratedCodeMyGameInstance() {}
 		{ "ObjectInitializerConstructorDeclared", "" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMyGameInstance_Statics::NewProp_PartyMembers_MetaData[] = {
+		{ "Category", "Game Data" },
+		{ "ModuleRelativePath", "MyGameInstance.h" },
+		{ "ToolTip", "array to store the party members loaded" },
+	};
+#endif
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UMyGameInstance_Statics::NewProp_PartyMembers = { "PartyMembers", nullptr, (EPropertyFlags)0x0010000000010015, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMyGameInstance, PartyMembers), METADATA_PARAMS(Z_Construct_UClass_UMyGameInstance_Statics::NewProp_PartyMembers_MetaData, ARRAY_COUNT(Z_Construct_UClass_UMyGameInstance_Statics::NewProp_PartyMembers_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UMyGameInstance_Statics::NewProp_PartyMembers_Inner = { "PartyMembers", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_UCharacterState_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UMyGameInstance_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyGameInstance_Statics::NewProp_PartyMembers,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyGameInstance_Statics::NewProp_PartyMembers_Inner,
+	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UMyGameInstance_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UMyGameInstance>::IsAbstract,
 	};
@@ -54,11 +74,11 @@ void EmptyLinkFunctionForGeneratedCodeMyGameInstance() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
-		nullptr,
+		Z_Construct_UClass_UMyGameInstance_Statics::PropPointers,
 		nullptr,
 		ARRAY_COUNT(DependentSingletons),
 		0,
-		0,
+		ARRAY_COUNT(Z_Construct_UClass_UMyGameInstance_Statics::PropPointers),
 		0,
 		0x001000A8u,
 		METADATA_PARAMS(Z_Construct_UClass_UMyGameInstance_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_UMyGameInstance_Statics::Class_MetaDataParams))
@@ -72,7 +92,7 @@ void EmptyLinkFunctionForGeneratedCodeMyGameInstance() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UMyGameInstance, 1703043778);
+	IMPLEMENT_CLASS(UMyGameInstance, 220483372);
 	template<> TURNROLL_API UClass* StaticClass<UMyGameInstance>()
 	{
 		return UMyGameInstance::StaticClass();
