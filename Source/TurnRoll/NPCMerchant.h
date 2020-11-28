@@ -21,7 +21,7 @@ protected:
 	virtual void BeginPlay() override;
 
 public:	
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UBoxComponent* BoxCollision;
 
 	// Called every frame

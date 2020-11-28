@@ -1,0 +1,95 @@
+/MANIFEST:NO
+/NOLOGO
+/DEBUG
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/FIXED:No
+/NXCOMPAT
+/STACK:5000000
+/DELAY:UNLOAD
+/DLL
+/PDBALTPATH:%_PDB%
+/OPT:NOREF
+/OPT:NOICF
+/INCREMENTAL:NO
+/ignore:4199
+/ignore:4099
+/DELAYLOAD:"d3d12.dll"
+/DELAYLOAD:"DBGHELP.DLL"
+/LIBPATH:"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\lib\x64"
+/LIBPATH:"C:\Program Files (x86)\Windows Kits\10\lib\10.0.18362.0\ucrt\x64"
+/LIBPATH:"C:\Program Files (x86)\Windows Kits\10\lib\10.0.18362.0\um\x64"
+/NODEFAULTLIB:"LIBCMT"
+/NODEFAULTLIB:"LIBCPMT"
+/NODEFAULTLIB:"LIBCMTD"
+/NODEFAULTLIB:"LIBCPMTD"
+/NODEFAULTLIB:"MSVCRTD"
+/NODEFAULTLIB:"MSVCPRTD"
+/NODEFAULTLIB:"LIBC"
+/NODEFAULTLIB:"LIBCP"
+/NODEFAULTLIB:"LIBCD"
+/NODEFAULTLIB:"LIBCPD"
+/FUNCTIONPADMIN
+"C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\TurnRollEditor\Development\Engine\SharedPCH.Engine.h.obj"
+"C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\CharacterState.cpp.obj"
+"C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\CharacterStats.cpp.obj"
+"C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\FCharInfo.cpp.obj"
+"C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\FEnemyInfo.cpp.obj"
+"C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\MainCharacter.cpp.obj"
+"C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\MyActor.cpp.obj"
+"C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\MyGameInstance.cpp.obj"
+"C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\MyGameMode.cpp.obj"
+"C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\NPCMerchant.cpp.obj"
+"C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\StructName.cpp.obj"
+"C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\TurnRoll.cpp.obj"
+"C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\TurnRollCharacter.cpp.obj"
+"C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\TurnRollGameMode.cpp.obj"
+"C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\CharacterState.gen.cpp.obj"
+"C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\CharacterStats.gen.cpp.obj"
+"C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\FCharInfo.gen.cpp.obj"
+"C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\FEnemyInfo.gen.cpp.obj"
+"C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\MainCharacter.gen.cpp.obj"
+"C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\MyActor.gen.cpp.obj"
+"C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\MyGameInstance.gen.cpp.obj"
+"C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\MyGameMode.gen.cpp.obj"
+"C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\NPCMerchant.gen.cpp.obj"
+"C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\StructName.gen.cpp.obj"
+"C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\TurnRoll.init.gen.cpp.obj"
+"C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\TurnRollCharacter.gen.cpp.obj"
+"C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\TurnRollGameMode.gen.cpp.obj"
+"C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\Default.rc2.res"
+"delayimp.lib"
+"wininet.lib"
+"rpcrt4.lib"
+"ws2_32.lib"
+"dbghelp.lib"
+"comctl32.lib"
+"Winmm.lib"
+"kernel32.lib"
+"user32.lib"
+"gdi32.lib"
+"winspool.lib"
+"comdlg32.lib"
+"advapi32.lib"
+"shell32.lib"
+"ole32.lib"
+"oleaut32.lib"
+"uuid.lib"
+"odbc32.lib"
+"odbccp32.lib"
+"netapi32.lib"
+"iphlpapi.lib"
+"setupapi.lib"
+"dwmapi.lib"
+"imm32.lib"
+"C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\UE4Editor-Engine.lib"
+"C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Development\CoreUObject\UE4Editor-CoreUObject.lib"
+"C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Development\Core\UE4Editor-Core.lib"
+"C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Development\InputCore\UE4Editor-InputCore.lib"
+"C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Development\HeadMountedDisplay\UE4Editor-HeadMountedDisplay.lib"
+/OUT:"C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Binaries\Win64\UE4Editor-TurnRoll-0101.dll"
+/IMPLIB:"C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Development\TurnRoll\UE4Editor-TurnRoll-0101.suppressed.lib"
+/PDB:"C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Binaries\Win64\UE4Editor-TurnRoll-0101.pdb"
+/ignore:4078
+/INCLUDE:IMPLEMENT_MODULE_TurnRoll
