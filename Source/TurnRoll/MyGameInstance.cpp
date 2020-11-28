@@ -109,7 +109,7 @@ void UMyGameInstance::Init()
 	this->FullParty.Add(UCharacterState::CreateGameCharacter(char6, this));
 
 
-
+	
 
 	//testing output of returned object
 	//UCharacterState* obj = UCharacterState::CreateGameCharacter(row, this);
@@ -117,3 +117,9 @@ void UMyGameInstance::Init()
 	//UE_LOG(LogTemp, Warning, TEXT("%f"), test);
 }
 
+void UMyGameInstance::SetCharacters(int f1, int f2)
+{
+	PartyMembers[f1] = FullParty[f2];
+
+	//FullParty
+};

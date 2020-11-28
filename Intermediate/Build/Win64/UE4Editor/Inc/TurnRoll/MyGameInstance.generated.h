@@ -13,8 +13,32 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define TURNROLL_MyGameInstance_generated_h
 
-#define TurnRoll_Source_TurnRoll_MyGameInstance_h_14_RPC_WRAPPERS
-#define TurnRoll_Source_TurnRoll_MyGameInstance_h_14_RPC_WRAPPERS_NO_PURE_DECLS
+#define TurnRoll_Source_TurnRoll_MyGameInstance_h_14_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execSetCharacters) \
+	{ \
+		P_GET_PROPERTY(UIntProperty,Z_Param_f1); \
+		P_GET_PROPERTY(UIntProperty,Z_Param_f2); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SetCharacters(Z_Param_f1,Z_Param_f2); \
+		P_NATIVE_END; \
+	}
+
+
+#define TurnRoll_Source_TurnRoll_MyGameInstance_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execSetCharacters) \
+	{ \
+		P_GET_PROPERTY(UIntProperty,Z_Param_f1); \
+		P_GET_PROPERTY(UIntProperty,Z_Param_f2); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SetCharacters(Z_Param_f1,Z_Param_f2); \
+		P_NATIVE_END; \
+	}
+
+
 #define TurnRoll_Source_TurnRoll_MyGameInstance_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUMyGameInstance(); \

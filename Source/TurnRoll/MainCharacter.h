@@ -18,15 +18,16 @@ class AMainCharacter : public ACharacter
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true")) 
     class UCameraComponent* FollowCamera;
 
-    UPROPERTY(EditAnywhere)
-    UUserWidget* NPCWidget;
-
 public:
     AMainCharacter();
 
     //the initial turn rate
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
     float BaseTurnRate;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    UUserWidget* NPCWidget;
+
 
 protected:
     // Called for forwards/backward input 

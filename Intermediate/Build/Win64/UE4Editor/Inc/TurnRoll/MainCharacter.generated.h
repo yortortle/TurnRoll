@@ -59,8 +59,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AMainCharacter); \
 
 #define TurnRoll_Source_TurnRoll_MainCharacter_h_13_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__CameraBoom() { return STRUCT_OFFSET(AMainCharacter, CameraBoom); } \
-	FORCEINLINE static uint32 __PPO__FollowCamera() { return STRUCT_OFFSET(AMainCharacter, FollowCamera); } \
-	FORCEINLINE static uint32 __PPO__NPCWidget() { return STRUCT_OFFSET(AMainCharacter, NPCWidget); }
+	FORCEINLINE static uint32 __PPO__FollowCamera() { return STRUCT_OFFSET(AMainCharacter, FollowCamera); }
 
 
 #define TurnRoll_Source_TurnRoll_MainCharacter_h_10_PROLOG

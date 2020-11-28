@@ -34,4 +34,9 @@ protected:
 
 public:
 	void Init();
+
+	UFUNCTION(BluePrintCallable)
+	void SetCharacters(int f1, int f2);
+
+	//void SetCharacters(int f1, int f2);
 };
