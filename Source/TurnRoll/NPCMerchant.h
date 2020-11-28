@@ -6,7 +6,7 @@
 #include "GameFramework/Character.h"
 #include "Components/BoxComponent.h"
 #include "MyGameInstance.h"
-#include "MainCharacter"
+#include "MainCharacter.h"
 #include "NPCMerchant.generated.h"
 
 UCLASS()
@@ -39,5 +39,5 @@ public:
 	void OnOverLapEnd(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 
 	UMyGameInstance* GameInstance;
-	UMainCharacter* MainCharacter;
+	AMainCharacter* MainCharacter;
 };

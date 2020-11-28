@@ -689,4 +689,6 @@ C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Source\TurnRoll\CharacterStats
 C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Inc\TurnRoll\CharacterStats.generated.h
 C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Inc\TurnRoll\CharacterState.generated.h
 C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Inc\TurnRoll\MyGameInstance.generated.h
+C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Source\TurnRoll\MainCharacter.h
+C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Inc\TurnRoll\MainCharacter.generated.h
 C:\Users\tnobl\Documents\Unreal Projects\TurnRoll\Intermediate\Build\Win64\UE4Editor\Inc\TurnRoll\NPCMerchant.generated.h

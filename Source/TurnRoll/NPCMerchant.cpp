@@ -19,7 +19,9 @@ void ANPCMerchant::BeginPlay()
 	Super::BeginPlay();
 
 	GameInstance = Cast<UMyGameInstance>(UGameplayStatics::GetGameInstance(GetWorld()));
+	MainCharacter = Cast<AMainCharacter>(UGameplayStatics::GetPlayerController(GetWorld(), 0));
 
+	//GetGameInstance().GetPlayerContro
 	BoxCollision->OnComponentBeginOverlap.AddDynamic(this, &ANPCMerchant::OnOverLapBegins);
     BoxCollision->OnComponentEndOverlap.AddDynamic(this, &ANPCMerchant::OnOverLapEnd);
 
@@ -42,7 +44,7 @@ void ANPCMerchant::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 void ANPCMerchant::OnOverLapBegins(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	GameInstance->InteractNPC = true;
-	UE_LOG(LogTemp, Warning, TEXT("Overlap Begins2"));
+	//UE_LOG(LogTemp, Warning, TEXT("Overlap Begins2"));
 	UE_LOG(LogTemp, Warning, TEXT("Overlap Begins3"));
 }
 
