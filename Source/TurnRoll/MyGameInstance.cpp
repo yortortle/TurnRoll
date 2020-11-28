@@ -53,10 +53,14 @@ void UMyGameInstance::Init()
 		"C4"), TEXT("Lookup Character"));
 	FCharInfo* char4 = party->FindRow<FCharInfo>(TEXT(
 		"C5"), TEXT("Lookup Character"));
+	FCharInfo* char5 = party->FindRow<FCharInfo>(TEXT(
+		"c6"), TEXT("Lookup Character"));
+	FCharInfo* char6 = party->FindRow<FCharInfo>(TEXT(
+		"C7"), TEXT("Lookup Character"));
 
 	if (char1 == nullptr)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Character ID 'C3' not found!"));
+		UE_LOG(LogTemp, Warning, TEXT("Character ID 'C1' not found!"));
 		return;
 	}
 	if (char2 == nullptr)
@@ -66,20 +70,45 @@ void UMyGameInstance::Init()
 	}
 	if (char3 == nullptr)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Character ID 'C3' not found!"));
+		UE_LOG(LogTemp, Warning, TEXT("Character ID 'C4' not found!"));
 		return;
 	}
 	if (char4 == nullptr)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Character ID 'C3' not found!"));
+		UE_LOG(LogTemp, Warning, TEXT("Character ID 'C5' not found!"));
 		return;
 	}
+	if (char5 == nullptr)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Character ID 'C6' not found!"));
+		return;
+	}
+	if (char6 == nullptr)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Character ID 'C7' not found!"));
+		return;
+	}
+
+
+
+
 
 	//passes in the ID of the party member to create and return a main character into the TArray PartyMembers
 	this->PartyMembers.Add(UCharacterState::CreateGameCharacter(char1, this));
 	this->PartyMembers.Add(UCharacterState::CreateGameCharacter(char2, this));
-	this->PartyMembers.Add(UCharacterState::CreateGameCharacter(char3, this));
-	this->PartyMembers.Add(UCharacterState::CreateGameCharacter(char4, this));
+	
+	
+	//this->PartyMembers.Add(UCharacterState::CreateGameCharacter(char3, this));
+	//this->PartyMembers.Add(UCharacterState::CreateGameCharacter(char4, this));
+
+	this->FullParty.Add(UCharacterState::CreateGameCharacter(char1, this));
+	this->FullParty.Add(UCharacterState::CreateGameCharacter(char2, this));
+	this->FullParty.Add(UCharacterState::CreateGameCharacter(char3, this));
+	this->FullParty.Add(UCharacterState::CreateGameCharacter(char4, this));
+	this->FullParty.Add(UCharacterState::CreateGameCharacter(char5, this));
+	this->FullParty.Add(UCharacterState::CreateGameCharacter(char6, this));
+
+
 
 
 	//testing output of returned object

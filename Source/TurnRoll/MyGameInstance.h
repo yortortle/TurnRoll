@@ -19,6 +19,9 @@ public:
 	//array to store the party members loaded
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Instance Data")
 	TArray<UCharacterState*> PartyMembers;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Instance Data")
+	TArray<UCharacterState*> FullParty;
 	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Instance Data")
 	bool InteractNPC;
