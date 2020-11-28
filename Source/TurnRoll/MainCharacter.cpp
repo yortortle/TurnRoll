@@ -67,6 +67,9 @@ void AMainCharacter::SetupPlayerInputComponent(class UInputComponent* InputCompo
     InputComponent->BindTouch(IE_Pressed, this, &AMainCharacter::TouchStarted);
     InputComponent->BindTouch(IE_Released, this, &AMainCharacter::TouchStopped);
 
+    //action mappings
+    InputComponent->BindAction("Interact", IE_Pressed, this, &AMainCharacter::Interact);
+
 }
 
 void AMainCharacter::TouchStarted(ETouchIndex::Type FingerIndex, FVector Location)
@@ -113,4 +116,9 @@ void AMainCharacter::MoveRight(float Value)
         // move in that direction
         AddMovementInput(Direction, Value);
     }
+}
+
+void AMainCharacter::Interact()
+{
+    UE_LOG(LogTemp, Warning, TEXT("interact"));
 }
