@@ -120,5 +120,6 @@ void AMainCharacter::MoveRight(float Value)
 
 void AMainCharacter::Interact()
 {
+    //NPCWidget->AddToViewport();
     UE_LOG(LogTemp, Warning, TEXT("interact"));
 }

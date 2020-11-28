@@ -21,8 +21,8 @@ void EmptyLinkFunctionForGeneratedCodeTurnRoll_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0xD1B4DBBE,
-				0xBFAA1B48,
+				0xD5185E37,
+				0x382EDECC,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

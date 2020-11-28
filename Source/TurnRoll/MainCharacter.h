@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "Blueprint/UserWidget.h"
 #include "MainCharacter.generated.h"
 
 UCLASS(config = Game)
@@ -16,6 +17,9 @@ class AMainCharacter : public ACharacter
 
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true")) 
     class UCameraComponent* FollowCamera;
+
+    UPROPERTY(EditAnywhere)
+    UUserWidget* NPCWidget;
 
 public:
     AMainCharacter();
