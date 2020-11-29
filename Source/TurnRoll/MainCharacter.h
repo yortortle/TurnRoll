@@ -76,7 +76,7 @@ public:
 
     TSubclassOf<APawn> DetermineCharacter(int f1);
 
-
+    int WhichCharacter = 0;
 
 
     //gets camera boom object

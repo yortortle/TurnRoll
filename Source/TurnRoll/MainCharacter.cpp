@@ -158,14 +158,13 @@ void AMainCharacter::SwitchCharacter1()
     AController* controller = GetController();
 
     //runs the actor tospawn function which takes in the index value of whichever party character we want to determine switch for, compares it to the game instance roster and determines which party member needs to be switched.
-    TSubclassOf<APawn> ActorToSpawn = DetermineCharacter(0);
+    TSubclassOf<APawn> ActorToSpawn = DetermineCharacter(WhichCharacter);
     if (!(ActorToSpawn))
     {
         UE_LOG(LogTemp, Warning, TEXT("spawn actor is null"));
         return;
     }
 
-    //spawning a new actor casted to APawn for us to be able to grab later during our possesss actor
     //grabbing both location and current rotation so I can destroy this actor before spawning a new actor
     FRotator CurrentRotation = this->GetActorRotation();
     FVector SpawnLocation = this->GetActorLocation();
@@ -195,11 +194,14 @@ void AMainCharacter::SwitchCharacter1()
 
     //destroy original actor
     this->Destroy();
+
+    WhichCharacter = 0;
 }
 
 void AMainCharacter::SwitchCharacter2()
 {
-    UE_LOG(LogTemp, Warning, TEXT("2"));
+    WhichCharacter = 1;
+    SwitchCharacter1();
 }
 
 TSubclassOf<APawn> AMainCharacter::DetermineCharacter(int f1)
