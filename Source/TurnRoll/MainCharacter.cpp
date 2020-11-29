@@ -58,6 +58,12 @@ AMainCharacter::AMainCharacter()
 
 }
 
+void AMainCharacter::BeginPlay()
+{
+    Super::BeginPlay();
+    UGameplayStatics::GetPlayerController(GetWorld(), 0)->SetInputMode(FInputModeGameOnly());
+}
+
 void AMainCharacter::SetupPlayerInputComponent(class UInputComponent* InputComponent)
 {
     // Set up gameplay key bindings
