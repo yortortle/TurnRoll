@@ -62,6 +62,10 @@ public:
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
         TSubclassOf<APawn> targetActor;
 
+    UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+        AMainCharacter* CharacterSwap1;
+
+
 
     //gets camera boom object
     FORCEINLINE class USpringArmComponent* GetCameraBoom() const 
