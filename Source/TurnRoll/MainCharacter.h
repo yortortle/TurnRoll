@@ -72,7 +72,10 @@ public:
 
     UMyGameInstance* GameInstance;
 
+    //TSubclassOf<APawn> DetermineCharacter(int f1);
+
     TSubclassOf<APawn> DetermineCharacter(int f1);
+
 
 
 

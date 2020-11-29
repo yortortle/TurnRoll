@@ -161,10 +161,16 @@ void AMainCharacter::SwitchCharacter1()
     AController* controller = GetController();
 
 
-    TSubclassOf<APawn> ActorToSpawn = DetermineCharacter(1);
+    //runs the actor tospawn function which takes in the index value of whichever party character we want to determine switch for, compares it to the game instance roster and determines which party member needs to be switched.
+    TSubclassOf<APawn> ActorToSpawn = DetermineCharacter(0);
+    if (!(ActorToSpawn))
+    {
+        UE_LOG(LogTemp, Warning, TEXT("spawn actor is null"));
+        return;
+    }
 
     //spawning a new actor casted to APawn for us to be able to grab later during our possesss actor
-    APawn* actor = GetWorld()->SpawnActor<APawn>(GameInstance->CharacterRosterTwo, SpawnLocation, this->GetActorRotation(), SpawnParams);
+    APawn* actor = GetWorld()->SpawnActor<APawn>(ActorToSpawn, SpawnLocation, this->GetActorRotation(), SpawnParams);
     SpawnDefaultController();
 
     //checks to see if the spawned actor is null, if it is, return
@@ -190,11 +196,11 @@ TSubclassOf<APawn> AMainCharacter::DetermineCharacter(int f1)
 {
     //sets a TArray from game instance party members to check for which party member is active later.
     TArray<UCharacterState*> Party = GameInstance->PartyMembers;
-
+    TSubclassOf<APawn> ReturnValue = nullptr;
     //a check that returns if party at required index is nullptr
     if (Party[f1] == nullptr)
     {
-        return;
+       // return;
     }
 
     if (Party[f1]->Character_Name == "Duck")
@@ -205,5 +211,6 @@ TSubclassOf<APawn> AMainCharacter::DetermineCharacter(int f1)
     {
         return GameInstance->CharacterRosterTwo;
     }
-    return nullptr;
+
+    return ReturnValue;
 }
