@@ -13,8 +13,44 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define TURNROLL_MainCharacter_generated_h
 
-#define TurnRoll_Source_TurnRoll_MainCharacter_h_15_RPC_WRAPPERS
-#define TurnRoll_Source_TurnRoll_MainCharacter_h_15_RPC_WRAPPERS_NO_PURE_DECLS
+#define TurnRoll_Source_TurnRoll_MainCharacter_h_15_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execSwitchCharacter2) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SwitchCharacter2(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSwitchCharacter1) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SwitchCharacter1(); \
+		P_NATIVE_END; \
+	}
+
+
+#define TurnRoll_Source_TurnRoll_MainCharacter_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execSwitchCharacter2) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SwitchCharacter2(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSwitchCharacter1) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SwitchCharacter1(); \
+		P_NATIVE_END; \
+	}
+
+
 #define TurnRoll_Source_TurnRoll_MainCharacter_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAMainCharacter(); \

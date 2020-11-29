@@ -27,6 +27,7 @@ protected:
 
     virtual void BeginPlay() override;
     // Called for forwards/backward input 
+
     void MoveForward(float Value);
 
     // Called for side to side input 
@@ -43,8 +44,10 @@ protected:
 
    // virtual void Interact();
 
+    UFUNCTION(BlueprintCallable)
     void SwitchCharacter1();
 
+    UFUNCTION(BlueprintCallable)
     void SwitchCharacter2();
 
 
