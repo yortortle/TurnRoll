@@ -131,7 +131,11 @@ void AMainCharacter::Interact()
    // controller->UnPossess();
    // test.
    // GetController()->SetPawn()
-    AActor* actor =  GetWorld()->SpawnActor<AActor>(targetActor, SpawnLocation, this->GetActorRotation(), SpawnParams);
+    APawn* actor =  GetWorld()->SpawnActor<APawn>(targetActor, SpawnLocation, this->GetActorRotation(), SpawnParams);
+    SpawnDefaultController();
+
+
+            
     //GetController()->SetPawn(actor);
     //APawn* obj = Cast<APawn>(SpawnedActor);
     //controlsler->Possess(targetActor);
@@ -142,12 +146,12 @@ void AMainCharacter::Interact()
     //SpawnedActor.
     //SpawnedActor->SpawnD
     //APawn* obj = Cast<APawn>(SpawnedActor);
-    //if (!(obj))
-    //{
-    //    //UE_LOG(Warning, LogTemp, TEXT("null");
-    //    return;
-    //}
+    if (!(actor))
+    {
+        //UE_LOG(Warning, LogTemp, TEXT("null");
+        return;
+    }
 
-    //Controller->Possess(test);
+    Controller->Possess(actor);
     UE_LOG(LogTemp, Warning, TEXT("interact"));
 }
