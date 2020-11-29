@@ -171,9 +171,9 @@ void AMainCharacter::SwitchCharacter1()
     FRotator CurrentRotation = this->GetActorRotation();
     FVector SpawnLocation = this->GetActorLocation();
     FActorSpawnParameters SpawnParams;
-    //this->Destroy();
+
     this->SetActorLocation(FVector(0, 0, 0), false, false);
-    //this->GetFollowCamera.rotation
+
     FRotator CurrentControllerRotation = controller->GetControlRotation();
     APawn* actor = GetWorld()->SpawnActor<APawn>(ActorToSpawn, SpawnLocation, CurrentRotation, SpawnParams);
     SpawnDefaultController();
@@ -186,27 +186,12 @@ void AMainCharacter::SwitchCharacter1()
         return;
     }
 
-    //possess the new actor for use (character successfully switched)
-    //actor->SetPlayerState(this->GetPlayerState);
-    //FVector CurrentVelocity = this->GetVelocity();
-    //actor->Velo
 
-    TArray<UStaticMeshComponent*> Components;
-    UStaticMesh* StaticMesh;
-    actor->GetComponents<UStaticMeshComponent>(Components);
-    for (int32 i = 0; i < Components.Num(); i++)
-    {
-        UStaticMeshComponent* StaticMeshComponent = Components[i];
-        StaticMesh = StaticMeshComponent->GetStaticMesh();
-    }
-
-
-    //FVector Velocity = this->GetVelocity();
-    //actor->GetRootComponent()->ComponentVelocity = Velocity;
-
+    FVector Velocity = this->GetVelocity();
+    actor->GetRootComponent()->ComponentVelocity = Velocity;
+    actor->AddMovementInput(FVector(this->GetActorLocation().X+10, this->GetActorLocation().Y+10, this->GetActorLocation().Y), 1.0, false);
     Controller->Possess(actor);
     controller->SetControlRotation(CurrentControllerRotation);
-
     this->Destroy();
 
     UE_LOG(LogTemp, Warning, TEXT("interact"));
