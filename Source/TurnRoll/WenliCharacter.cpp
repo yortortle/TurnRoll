@@ -5,5 +5,5 @@
 
 void AWenliCharacter::Action()
 {
-	UE_LOG(LogTemp, Warning, TEXT("ActionJeff"));
+	UE_LOG(LogTemp, Warning, TEXT("ActionWenli"));
 }

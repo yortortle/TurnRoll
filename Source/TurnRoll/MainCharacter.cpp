@@ -212,6 +212,22 @@ TSubclassOf<APawn> AMainCharacter::DetermineCharacter(int f1)
     {
         return GameInstance->CharacterRosterTwo;
     }
+    if (Party[f1]->Character_Name == "Yort")
+    {
+        return GameInstance->CharacterRosterThree;
+    }
+    if (Party[f1]->Character_Name == "Hayden")
+    {
+        return GameInstance->CharacterRosterFour;
+    }
+    if (Party[f1]->Character_Name == "Wenli")
+    {
+        return GameInstance->CharacterRosterFive;
+    }
+    if (Party[f1]->Character_Name == "Vash")
+    {
+        return GameInstance->CharacterRosterSix;
+    }
 
     //returns nullPtr if nothing is returned
     return ReturnValue;
