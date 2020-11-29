@@ -72,6 +72,8 @@ public:
 
     UMyGameInstance* GameInstance;
 
+    TSubclassOf<APawn> DetermineCharacter(int f1);
+
 
 
     //gets camera boom object

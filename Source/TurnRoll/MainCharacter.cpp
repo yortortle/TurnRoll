@@ -160,6 +160,9 @@ void AMainCharacter::SwitchCharacter1()
     //setting a reference to the current controller
     AController* controller = GetController();
 
+
+    TSubclassOf<APawn> ActorToSpawn = DetermineCharacter(1);
+
     //spawning a new actor casted to APawn for us to be able to grab later during our possesss actor
     APawn* actor = GetWorld()->SpawnActor<APawn>(GameInstance->CharacterRosterTwo, SpawnLocation, this->GetActorRotation(), SpawnParams);
     SpawnDefaultController();
@@ -181,4 +184,26 @@ void AMainCharacter::SwitchCharacter1()
 void AMainCharacter::SwitchCharacter2()
 {
     UE_LOG(LogTemp, Warning, TEXT("2"));
+}
+
+TSubclassOf<APawn> AMainCharacter::DetermineCharacter(int f1)
+{
+    //sets a TArray from game instance party members to check for which party member is active later.
+    TArray<UCharacterState*> Party = GameInstance->PartyMembers;
+
+    //a check that returns if party at required index is nullptr
+    if (Party[f1] == nullptr)
+    {
+        return;
+    }
+
+    if (Party[f1]->Character_Name == "Duck")
+    {
+        return GameInstance->CharacterRosterOne;
+    }
+    if (Party[f1]->Character_Name == "Jeff")
+    {
+        return GameInstance->CharacterRosterTwo;
+    }
+    return nullptr;
 }
