@@ -172,6 +172,8 @@ void AMainCharacter::SwitchCharacter1()
     FActorSpawnParameters SpawnParams;
     //this->Destroy();
     this->SetActorLocation(FVector(0, 0, 0), false, false);
+    //this->GetFollowCamera.rotation
+    FRotator CurrentControllerRotation = controller->GetControlRotation();
     APawn* actor = GetWorld()->SpawnActor<APawn>(ActorToSpawn, SpawnLocation, CurrentRotation, SpawnParams);
     SpawnDefaultController();
 
@@ -183,6 +185,7 @@ void AMainCharacter::SwitchCharacter1()
 
     //possess the new actor for use (character successfully switched)
     Controller->Possess(actor);
+    controller->SetControlRotation(CurrentControllerRotation);
 
     //destroys current actor
     this->Destroy();
