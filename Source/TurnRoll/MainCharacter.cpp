@@ -157,7 +157,6 @@ void AMainCharacter::SwitchCharacter1()
     //setting a reference to the current controller
     AController* controller = GetController();
 
-
     //runs the actor tospawn function which takes in the index value of whichever party character we want to determine switch for, compares it to the game instance roster and determines which party member needs to be switched.
     TSubclassOf<APawn> ActorToSpawn = DetermineCharacter(0);
     if (!(ActorToSpawn))
@@ -172,29 +171,30 @@ void AMainCharacter::SwitchCharacter1()
     FVector SpawnLocation = this->GetActorLocation();
     FActorSpawnParameters SpawnParams;
 
+    //sets actor location far away so that he doesn't spawn ontop of new actora nd collide, creating displacement.
     this->SetActorLocation(FVector(0, 0, 0), false, false);
 
+    //get current rotation of the controller to set later after the actor is spawned
     FRotator CurrentControllerRotation = controller->GetControlRotation();
+
+    //set actor equal to the spawned actor, so we can possess it with our controller
     APawn* actor = GetWorld()->SpawnActor<APawn>(ActorToSpawn, SpawnLocation, CurrentRotation, SpawnParams);
     SpawnDefaultController();
 
-   //   SkeletalMeshActor().
-    
     //checks to see if the spawned actor is null, if it is, return
     if (!(actor))
     {
         return;
     }
 
+    //possess the spawned actor to take over
+    controller->Possess(actor);
 
-    FVector Velocity = this->GetVelocity();
-    actor->GetRootComponent()->ComponentVelocity = Velocity;
-    actor->AddMovementInput(FVector(this->GetActorLocation().X+10, this->GetActorLocation().Y+10, this->GetActorLocation().Y), 1.0, false);
-    Controller->Possess(actor);
+    //this normalizes the camera view to the old one so that it doesn't reset every time you spawn an actor
     controller->SetControlRotation(CurrentControllerRotation);
-    this->Destroy();
 
-    UE_LOG(LogTemp, Warning, TEXT("interact"));
+    //destroy original actor
+    this->Destroy();
 }
 
 void AMainCharacter::SwitchCharacter2()
