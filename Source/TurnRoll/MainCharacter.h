@@ -40,6 +40,10 @@ protected:
 
     void Interact();
 
+    void SwitchCharacter1();
+
+    void SwitchCharacter2();
+
 
     //set up player component inputs to override
     virtual void SetupPlayerInputComponent (class UInputComponent* InputComponent) override;
@@ -54,7 +58,7 @@ public:
         float FloatTest;
 
     UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
-        UUserWidget* NPCWidget;
+        TSubclassOf<UUserWidget> pauseWidget;
 
     UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
         APawn* CharacterSwap;

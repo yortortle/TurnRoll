@@ -69,6 +69,8 @@ void AMainCharacter::SetupPlayerInputComponent(class UInputComponent* InputCompo
 
     //action mappings
     InputComponent->BindAction("Interact", IE_Pressed, this, &AMainCharacter::Interact);
+    InputComponent->BindAction("SwitchCharacter1", IE_Pressed, this, &AMainCharacter::Interact);
+    InputComponent->BindAction("SwitchCharacter2", IE_Pressed, this, &AMainCharacter::Interact);
 
 }
 
@@ -120,38 +122,37 @@ void AMainCharacter::MoveRight(float Value)
 
 void AMainCharacter::Interact()
 {
-    //NPCWidget->AddToViewport();
+    //grabbing location of this actor for spawning new character later
     FVector SpawnLocation = this->GetActorLocation();
     FActorSpawnParameters SpawnParams;
-   // GetWorld()->SpawnActor()
+    
+    //setting a reference to the current controller
     AController* controller = GetController();
-    APawn* test = controller->GetPawn();
-    //test.
-   // GetController()->SetPawn
-   // controller->UnPossess();
-   // test.
-   // GetController()->SetPawn()
+
+    //spawning a new actor casted to APawn for us to be able to grab later during our possesss actor
     APawn* actor =  GetWorld()->SpawnActor<APawn>(targetActor, SpawnLocation, this->GetActorRotation(), SpawnParams);
     SpawnDefaultController();
 
-
-            
-    //GetController()->SetPawn(actor);
-    //APawn* obj = Cast<APawn>(SpawnedActor);
-    //controlsler->Possess(targetActor);
-   // GetWorld()->FindAllAct
-
-    //controller->Possess();
-   // GetWorld()->
-    //SpawnedActor.
-    //SpawnedActor->SpawnD
-    //APawn* obj = Cast<APawn>(SpawnedActor);
+    //checks to see if the spawned actor is null, if it is, return
     if (!(actor))
     {
-        //UE_LOG(Warning, LogTemp, TEXT("null");
         return;
     }
 
+    //possess the new actor for use (character successfully switched)
     Controller->Possess(actor);
+    
+    //destroys current actor
+    this->Destroy();
     UE_LOG(LogTemp, Warning, TEXT("interact"));
+}
+
+void AMainCharacter::SwitchCharacter1()
+{
+    UE_LOG(LogTemp, Warning, TEXT("1"));
+}
+
+void AMainCharacter::SwitchCharacter2()
+{
+    UE_LOG(LogTemp, Warning, TEXT("2"));
 }
