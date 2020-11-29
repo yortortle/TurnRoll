@@ -153,10 +153,6 @@ void AMainCharacter::Interact()
 
 void AMainCharacter::SwitchCharacter1()
 {
-    //grabbing location of this actor for spawning new character later
-    FVector SpawnLocation = this->GetActorLocation();
-    FActorSpawnParameters SpawnParams;
-
     //setting a reference to the current controller
     AController* controller = GetController();
 
@@ -170,7 +166,13 @@ void AMainCharacter::SwitchCharacter1()
     }
 
     //spawning a new actor casted to APawn for us to be able to grab later during our possesss actor
-    APawn* actor = GetWorld()->SpawnActor<APawn>(ActorToSpawn, SpawnLocation, this->GetActorRotation(), SpawnParams);
+    //grabbing both location and current rotation so I can destroy this actor before spawning a new actor
+    FRotator CurrentRotation = this->GetActorRotation();
+    FVector SpawnLocation = this->GetActorLocation();
+    FActorSpawnParameters SpawnParams;
+    //this->Destroy();
+    this->SetActorLocation(FVector(0, 0, 0), false, false);
+    APawn* actor = GetWorld()->SpawnActor<APawn>(ActorToSpawn, SpawnLocation, CurrentRotation, SpawnParams);
     SpawnDefaultController();
 
     //checks to see if the spawned actor is null, if it is, return
@@ -184,6 +186,7 @@ void AMainCharacter::SwitchCharacter1()
 
     //destroys current actor
     this->Destroy();
+
     UE_LOG(LogTemp, Warning, TEXT("interact"));
 }
 
@@ -197,12 +200,12 @@ TSubclassOf<APawn> AMainCharacter::DetermineCharacter(int f1)
     //sets a TArray from game instance party members to check for which party member is active later.
     TArray<UCharacterState*> Party = GameInstance->PartyMembers;
     TSubclassOf<APawn> ReturnValue = nullptr;
+
     //a check that returns if party at required index is nullptr
     if (Party[f1] == nullptr)
     {
-       // return;
+       return nullptr;
     }
-
     if (Party[f1]->Character_Name == "Duck")
     {
         return GameInstance->CharacterRosterOne;
