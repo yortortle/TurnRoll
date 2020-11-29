@@ -104,6 +104,7 @@ void AMainCharacter::TurnAtRate(float Rate)
 
 void AMainCharacter::MoveForward(float Value)
 {
+    axisValue = Value;
     //checks for controller and if there is an actual input passed to it
     if ((Controller != NULL) && (Value != 0.0f))
     {
@@ -115,9 +116,11 @@ void AMainCharacter::MoveForward(float Value)
         const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
         AddMovementInput(Direction, Value);
     }
+    //axisValue = 0;
 }
 void AMainCharacter::MoveRight(float Value)
 {
+    axisValue = Value;
     if ((Controller != NULL) && (Value != 0.0f))
     {
         // find out which way is right
@@ -130,6 +133,7 @@ void AMainCharacter::MoveRight(float Value)
         // move in that direction
         AddMovementInput(Direction, Value);
     }
+    //axisValue = 0;
 }
 
 void AMainCharacter::Interact()

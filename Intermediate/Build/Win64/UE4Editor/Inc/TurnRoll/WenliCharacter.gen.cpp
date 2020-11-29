@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeWenliCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AWenliCharacter, 2998486103);
+	IMPLEMENT_CLASS(AWenliCharacter, 1323498496);
 	template<> TURNROLL_API UClass* StaticClass<AWenliCharacter>()
 	{
 		return AWenliCharacter::StaticClass();

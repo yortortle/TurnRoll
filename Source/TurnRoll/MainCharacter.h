@@ -76,6 +76,14 @@ public:
     UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
         AMainCharacter* CharacterSwap1;
 
+    UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+    float axisValue;
+
+    UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+    float TestFloat;
+
+
+
     UMyGameInstance* GameInstance;
 
     //TSubclassOf<APawn> DetermineCharacter(int f1);
