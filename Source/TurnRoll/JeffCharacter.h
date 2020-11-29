@@ -13,5 +13,8 @@ UCLASS()
 class TURNROLL_API AJeffCharacter : public AMainCharacter
 {
 	GENERATED_BODY()
+
+public:
+	virtual void Interact() override;
 	
 };

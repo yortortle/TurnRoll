@@ -3,3 +3,7 @@
 
 #include "JeffCharacter.h"
 
+void AJeffCharacter::Interact()
+{
+	UE_LOG(LogTemp, Warning, TEXT("interactjeff"));
+}

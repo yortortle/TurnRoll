@@ -39,7 +39,7 @@ protected:
     /** Handler for when a touch input stops. */
     void TouchStopped(ETouchIndex::Type FingerIndex, FVector Location);
 
-    void Interact();
+   // virtual void Interact();
 
     void SwitchCharacter1();
 
@@ -50,6 +50,9 @@ protected:
     virtual void SetupPlayerInputComponent (class UInputComponent* InputComponent) override;
 
 public:
+
+
+    virtual void Interact();
 
     //the initial turn rate
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)

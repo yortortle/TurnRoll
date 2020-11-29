@@ -127,28 +127,6 @@ void AMainCharacter::MoveRight(float Value)
 
 void AMainCharacter::Interact()
 {
-    //grabbing location of this actor for spawning new character later
-    FVector SpawnLocation = this->GetActorLocation();
-    FActorSpawnParameters SpawnParams;
-    
-    //setting a reference to the current controller
-    AController* controller = GetController();
-
-    //spawning a new actor casted to APawn for us to be able to grab later during our possesss actor
-    APawn* actor =  GetWorld()->SpawnActor<APawn>(targetActor, SpawnLocation, this->GetActorRotation(), SpawnParams);
-    SpawnDefaultController();
-
-    //checks to see if the spawned actor is null, if it is, return
-    if (!(actor))
-    {
-        return;
-    }
-
-    //possess the new actor for use (character successfully switched)
-    Controller->Possess(actor);
-    
-    //destroys current actor
-    this->Destroy();
     UE_LOG(LogTemp, Warning, TEXT("interact"));
 }
 
