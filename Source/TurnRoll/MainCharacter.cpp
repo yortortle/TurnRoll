@@ -76,7 +76,6 @@ void AMainCharacter::SetupPlayerInputComponent(class UInputComponent* InputCompo
     InputComponent->BindAction("Interact", IE_Pressed, this, &AMainCharacter::Interact);
     InputComponent->BindAction("SwitchCharacter1", IE_Pressed, this, &AMainCharacter::SwitchCharacter1);
     InputComponent->BindAction("SwitchCharacter2", IE_Pressed, this, &AMainCharacter::SwitchCharacter2);
-
 }
 
 void AMainCharacter::TouchStarted(ETouchIndex::Type FingerIndex, FVector Location)

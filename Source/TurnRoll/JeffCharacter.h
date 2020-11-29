@@ -16,5 +16,4 @@ class TURNROLL_API AJeffCharacter : public AMainCharacter
 
 public:
 	virtual void Interact() override;
-	
 };
