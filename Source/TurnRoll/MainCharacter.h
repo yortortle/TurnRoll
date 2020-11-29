@@ -51,6 +51,7 @@ protected:
 
 public:
 
+    virtual void Action();
 
     virtual void Interact();
 

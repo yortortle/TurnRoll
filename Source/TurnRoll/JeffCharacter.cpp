@@ -7,3 +7,8 @@ void AJeffCharacter::Interact()
 {
 	UE_LOG(LogTemp, Warning, TEXT("interactjeff"));
 }
+
+void AJeffCharacter::Action()
+{
+	UE_LOG(LogTemp, Warning, TEXT("ActionJeff"));
+}
