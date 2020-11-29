@@ -127,10 +127,14 @@ void AMainCharacter::Interact()
     AController* controller = GetController();
     APawn* test = controller->GetPawn();
     //test.
-    //controller->UnPossess();
-    AActor* SpawnedActor =  GetWorld()->SpawnActor<AActor>(targetActor, SpawnLocation, this->GetActorRotation(), SpawnParams);
+   // GetController()->SetPawn
+    controller->UnPossess();
+   // test.
+   // GetController()->SetPawn()
+    AActor* actor =  GetWorld()->SpawnActor<AActor>(targetActor, SpawnLocation, this->GetActorRotation(), SpawnParams);
+    //GetController()->SetPawn(actor);
     //APawn* obj = Cast<APawn>(SpawnedActor);
-   // controller->Possess(SpawnedActor);
+    //controlsler->Possess(targetActor);
    // GetWorld()->FindAllAct
 
    // GetWorld()->

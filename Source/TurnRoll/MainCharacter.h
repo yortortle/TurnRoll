@@ -57,7 +57,7 @@ public:
         UUserWidget* NPCWidget;
 
     UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
-        ACharacter* CharacterSwap;
+        APawn* CharacterSwap;
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
         TSubclassOf<APawn> targetActor;
