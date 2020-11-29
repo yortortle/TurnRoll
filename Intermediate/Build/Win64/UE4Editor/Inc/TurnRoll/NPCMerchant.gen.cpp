@@ -186,6 +186,10 @@ void EmptyLinkFunctionForGeneratedCodeNPCMerchant() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_targetActor_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_targetActor;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BoxCollision_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_BoxCollision;
@@ -209,6 +213,13 @@ void EmptyLinkFunctionForGeneratedCodeNPCMerchant() {}
 	};
 #endif
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ANPCMerchant_Statics::NewProp_targetActor_MetaData[] = {
+		{ "Category", "NPCMerchant" },
+		{ "ModuleRelativePath", "NPCMerchant.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ANPCMerchant_Statics::NewProp_targetActor = { "targetActor", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ANPCMerchant, targetActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ANPCMerchant_Statics::NewProp_targetActor_MetaData, ARRAY_COUNT(Z_Construct_UClass_ANPCMerchant_Statics::NewProp_targetActor_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ANPCMerchant_Statics::NewProp_BoxCollision_MetaData[] = {
 		{ "Category", "NPCMerchant" },
 		{ "EditInline", "true" },
@@ -217,6 +228,7 @@ void EmptyLinkFunctionForGeneratedCodeNPCMerchant() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ANPCMerchant_Statics::NewProp_BoxCollision = { "BoxCollision", nullptr, (EPropertyFlags)0x001000000008000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ANPCMerchant, BoxCollision), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ANPCMerchant_Statics::NewProp_BoxCollision_MetaData, ARRAY_COUNT(Z_Construct_UClass_ANPCMerchant_Statics::NewProp_BoxCollision_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ANPCMerchant_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANPCMerchant_Statics::NewProp_targetActor,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANPCMerchant_Statics::NewProp_BoxCollision,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ANPCMerchant_Statics::StaticCppClassTypeInfo = {
@@ -246,7 +258,7 @@ void EmptyLinkFunctionForGeneratedCodeNPCMerchant() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ANPCMerchant, 1064226914);
+	IMPLEMENT_CLASS(ANPCMerchant, 3851327514);
 	template<> TURNROLL_API UClass* StaticClass<ANPCMerchant>()
 	{
 		return ANPCMerchant::StaticClass();

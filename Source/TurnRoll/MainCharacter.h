@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "GameFramework//Actor.h"
 #include "GameFramework/Character.h"
 #include "Blueprint/UserWidget.h"
 #include "MainCharacter.generated.h"
@@ -20,14 +21,6 @@ class AMainCharacter : public ACharacter
 
 public:
     AMainCharacter();
-
-    //the initial turn rate
-    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
-    float BaseTurnRate;
-
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    UUserWidget* NPCWidget;
-
 
 protected:
     // Called for forwards/backward input 
@@ -52,6 +45,24 @@ protected:
     virtual void SetupPlayerInputComponent (class UInputComponent* InputComponent) override;
 
 public:
+
+    //the initial turn rate
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
+        float BaseTurnRate;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+        float FloatTest;
+
+    UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+        UUserWidget* NPCWidget;
+
+    UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+        ACharacter* CharacterSwap;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+        TSubclassOf<APawn> targetActor;
+
+
     //gets camera boom object
     FORCEINLINE class USpringArmComponent* GetCameraBoom() const 
     {

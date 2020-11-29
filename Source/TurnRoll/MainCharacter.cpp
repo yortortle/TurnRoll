@@ -121,5 +121,28 @@ void AMainCharacter::MoveRight(float Value)
 void AMainCharacter::Interact()
 {
     //NPCWidget->AddToViewport();
+    FVector SpawnLocation = this->GetActorLocation();
+    FActorSpawnParameters SpawnParams;
+   // GetWorld()->SpawnActor()
+    AController* controller = GetController();
+    APawn* test = controller->GetPawn();
+    //test.
+    //controller->UnPossess();
+    AActor* SpawnedActor =  GetWorld()->SpawnActor<AActor>(targetActor, SpawnLocation, this->GetActorRotation(), SpawnParams);
+    //APawn* obj = Cast<APawn>(SpawnedActor);
+   // controller->Possess(SpawnedActor);
+   // GetWorld()->FindAllAct
+
+   // GetWorld()->
+    //SpawnedActor.
+    //SpawnedActor->SpawnD
+    //APawn* obj = Cast<APawn>(SpawnedActor);
+    //if (!(obj))
+    //{
+    //    //UE_LOG(Warning, LogTemp, TEXT("null");
+    //    return;
+    //}
+
+    //Controller->Possess(test);
     UE_LOG(LogTemp, Warning, TEXT("interact"));
 }

@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\TurnRoll.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{0D5BCD31-4B2F-47C8-8EB4-D5E13C85DDA7}</UniqueIdentifier>
+      <UniqueIdentifier>{B8C3D965-AF7A-43F4-B6B1-79BA2FAF4D11}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\TurnRoll.Target.cs">
       <Filter>Source</Filter>
@@ -13,7 +13,7 @@
     </None>
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{BD20B2B4-FD52-4772-A03D-289F39D11048}</UniqueIdentifier>
+      <UniqueIdentifier>{A2D68BC3-D874-45B1-90C7-862AD546C659}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -31,7 +31,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\TurnRoll">
-      <UniqueIdentifier>{FDB009DD-FD52-49B9-837D-8906E8576E11}</UniqueIdentifier>
+      <UniqueIdentifier>{10686F14-9622-4AF8-B415-F98699644BBD}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\TurnRoll\CharacterState.cpp">
       <Filter>Source\TurnRoll</Filter>
@@ -87,6 +87,12 @@
     <ClInclude Include="..\..\Source\TurnRoll\NPCMerchant.h">
       <Filter>Source\TurnRoll</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\TurnRoll\ShowCharacters.cpp">
+      <Filter>Source\TurnRoll</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TurnRoll\ShowCharacters.h">
+      <Filter>Source\TurnRoll</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\TurnRoll\StructName.cpp">
       <Filter>Source\TurnRoll</Filter>
     </ClCompile>
@@ -114,15 +120,5 @@
     <ClInclude Include="..\..\Source\TurnRoll\TurnRollGameMode.h">
       <Filter>Source\TurnRoll</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\Source\TurnRoll\ShowCharacters.h">
-      <Filter>Source\TurnRoll</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\Source\TurnRoll\ShowCharacters.cpp">
-      <Filter>Source\TurnRoll</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>
