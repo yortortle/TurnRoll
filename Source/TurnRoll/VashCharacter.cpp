@@ -3,3 +3,7 @@
 
 #include "VashCharacter.h"
 
+void AVashCharacter::Action()
+{
+	UE_LOG(LogTemp, Warning, TEXT("ActionVash"));
+}

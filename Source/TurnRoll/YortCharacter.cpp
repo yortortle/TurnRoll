@@ -3,3 +3,7 @@
 
 #include "YortCharacter.h"
 
+void AYortCharacter::Action()
+{
+	UE_LOG(LogTemp, Warning, TEXT("YortAction"));
+}

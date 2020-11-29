@@ -13,5 +13,7 @@ UCLASS()
 class TURNROLL_API AYortCharacter : public AMainCharacter
 {
 	GENERATED_BODY()
-	
+
+public:
+    virtual void Action() override;
 };

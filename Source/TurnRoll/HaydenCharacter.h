@@ -14,4 +14,6 @@ class TURNROLL_API AHaydenCharacter : public AMainCharacter
 {
 	GENERATED_BODY()
 	
+public:
+	virtual void Action() override;
 };

@@ -3,3 +3,7 @@
 
 #include "HaydenCharacter.h"
 
+void AHaydenCharacter::Action()
+{
+	UE_LOG(LogTemp, Warning, TEXT("HaydenAction"));
+}

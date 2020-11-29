@@ -3,3 +3,7 @@
 
 #include "WenliCharacter.h"
 
+void AWenliCharacter::Action()
+{
+	UE_LOG(LogTemp, Warning, TEXT("ActionJeff"));
+}
