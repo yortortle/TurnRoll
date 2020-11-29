@@ -51,6 +51,10 @@ AMainCharacter::AMainCharacter()
     //orienting follow camera
     FollowCamera->RelativeLocation = FVector(-450, 0, 430);
     FollowCamera->RelativeRotation = FRotator(-30, 0, 0);
+
+    //casting to game instance for a game instance object to use later on
+    GameInstance = Cast<UMyGameInstance>(UGameplayStatics::GetGameInstance(GetWorld()));
+
 }
 
 void AMainCharacter::SetupPlayerInputComponent(class UInputComponent* InputComponent)
@@ -149,7 +153,29 @@ void AMainCharacter::Interact()
 
 void AMainCharacter::SwitchCharacter1()
 {
-    UE_LOG(LogTemp, Warning, TEXT("1"));
+    //grabbing location of this actor for spawning new character later
+    FVector SpawnLocation = this->GetActorLocation();
+    FActorSpawnParameters SpawnParams;
+
+    //setting a reference to the current controller
+    AController* controller = GetController();
+
+    //spawning a new actor casted to APawn for us to be able to grab later during our possesss actor
+    APawn* actor = GetWorld()->SpawnActor<APawn>(GameInstance->CharacterRosterTwo, SpawnLocation, this->GetActorRotation(), SpawnParams);
+    SpawnDefaultController();
+
+    //checks to see if the spawned actor is null, if it is, return
+    if (!(actor))
+    {
+        return;
+    }
+
+    //possess the new actor for use (character successfully switched)
+    Controller->Possess(actor);
+
+    //destroys current actor
+    this->Destroy();
+    UE_LOG(LogTemp, Warning, TEXT("interact"));
 }
 
 void AMainCharacter::SwitchCharacter2()

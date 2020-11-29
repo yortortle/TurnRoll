@@ -6,6 +6,7 @@
 #include "GameFramework//Actor.h"
 #include "GameFramework/Character.h"
 #include "Blueprint/UserWidget.h"
+#include "MyGameInstance.h"
 #include "MainCharacter.generated.h"
 
 UCLASS(config = Game)
@@ -68,6 +69,8 @@ public:
 
     UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
         AMainCharacter* CharacterSwap1;
+
+    UMyGameInstance* GameInstance;
 
 
 

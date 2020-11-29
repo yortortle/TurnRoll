@@ -29,6 +29,13 @@ public:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Instance Data")
 	float Gold = 25.0f;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TSubclassOf<APawn> CharacterRosterOne;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TSubclassOf<APawn> CharacterRosterTwo;
+
+
 protected:
 	bool isInitialized;
 
