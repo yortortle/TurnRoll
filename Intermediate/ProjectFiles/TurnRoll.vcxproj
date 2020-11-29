@@ -562,6 +562,12 @@
     <NMakeOutput>..\..\Binaries\HTML5\TurnRoll-HTML5-Shipping.js</NMakeOutput>
   </PropertyGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\TurnRoll\VashCharacter.cpp" />
+    <ClCompile Include="..\..\Source\TurnRoll\WenliCharacter.cpp" />
+    <ClCompile Include="..\..\Source\TurnRoll\YortCharacter.cpp" />
+    <ClInclude Include="..\..\Source\TurnRoll\VashCharacter.h" />
+    <ClInclude Include="..\..\Source\TurnRoll\WenliCharacter.h" />
+    <ClInclude Include="..\..\Source\TurnRoll\YortCharacter.h" />
     <None Include="..\..\TurnRoll.uproject" />
     <None Include="..\..\Source\TurnRoll.Target.cs" />
     <None Include="..\..\Source\TurnRollEditor.Target.cs" />
@@ -579,8 +585,10 @@
     <ClInclude Include="..\..\Source\TurnRoll\FCharInfo.h" />
     <ClCompile Include="..\..\Source\TurnRoll\FEnemyInfo.cpp" />
     <ClInclude Include="..\..\Source\TurnRoll\FEnemyInfo.h" />
+    <ClCompile Include="..\..\Source\TurnRoll\HaydenCharacter.cpp" />
     <ClCompile Include="..\..\Source\TurnRoll\JeffCharacter.cpp" />
     <ClCompile Include="..\..\Source\TurnRoll\MainCharacter.cpp" />
+    <ClInclude Include="..\..\Source\TurnRoll\HaydenCharacter.h" />
     <ClInclude Include="..\..\Source\TurnRoll\JeffCharacter.h" />
     <ClInclude Include="..\..\Source\TurnRoll\MainCharacter.h" />
     <ClCompile Include="..\..\Source\TurnRoll\MyActor.cpp" />

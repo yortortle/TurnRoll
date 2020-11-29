@@ -47,6 +47,10 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TSubclassOf<APawn> CharacterRosterSix;
 
+	bool ThreeUnlock;
+	bool FourUnlock;
+	bool FiveUnlock;
+	bool SixUnlock;
 
 protected:
 	bool isInitialized;

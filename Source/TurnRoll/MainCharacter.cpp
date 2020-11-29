@@ -6,6 +6,7 @@
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/InputComponent.h"
+#include "NPCMerchant.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/Controller.h"
 #include "Animation/SkeletalMeshActor.h"
@@ -133,7 +134,6 @@ void AMainCharacter::MoveRight(float Value)
 
 void AMainCharacter::Interact()
 {
-    UE_LOG(LogTemp, Warning, TEXT("interact"));
 }
 
 void AMainCharacter::Action()

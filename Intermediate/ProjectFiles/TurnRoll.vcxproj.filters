@@ -125,9 +125,33 @@
     <ClInclude Include="..\..\Source\TurnRoll\JeffCharacter.h">
       <Filter>Source\TurnRoll</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\TurnRoll\HaydenCharacter.h">
+      <Filter>Source\TurnRoll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TurnRoll\YortCharacter.h">
+      <Filter>Source\TurnRoll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TurnRoll\WenliCharacter.h">
+      <Filter>Source\TurnRoll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TurnRoll\VashCharacter.h">
+      <Filter>Source\TurnRoll</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\TurnRoll\JeffCharacter.cpp">
+      <Filter>Source\TurnRoll</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TurnRoll\HaydenCharacter.cpp">
+      <Filter>Source\TurnRoll</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TurnRoll\YortCharacter.cpp">
+      <Filter>Source\TurnRoll</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TurnRoll\WenliCharacter.cpp">
+      <Filter>Source\TurnRoll</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TurnRoll\VashCharacter.cpp">
       <Filter>Source\TurnRoll</Filter>
     </ClCompile>
   </ItemGroup>
