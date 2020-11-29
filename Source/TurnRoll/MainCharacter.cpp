@@ -8,6 +8,7 @@
 #include "Components/InputComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/Controller.h"
+#include "Animation/SkeletalMeshActor.h"
 #include "GameFramework/SpringArmComponent.h"
 
 
@@ -177,6 +178,8 @@ void AMainCharacter::SwitchCharacter1()
     APawn* actor = GetWorld()->SpawnActor<APawn>(ActorToSpawn, SpawnLocation, CurrentRotation, SpawnParams);
     SpawnDefaultController();
 
+   //   SkeletalMeshActor().
+    
     //checks to see if the spawned actor is null, if it is, return
     if (!(actor))
     {
@@ -184,10 +187,26 @@ void AMainCharacter::SwitchCharacter1()
     }
 
     //possess the new actor for use (character successfully switched)
+    //actor->SetPlayerState(this->GetPlayerState);
+    //FVector CurrentVelocity = this->GetVelocity();
+    //actor->Velo
+
+    TArray<UStaticMeshComponent*> Components;
+    UStaticMesh* StaticMesh;
+    actor->GetComponents<UStaticMeshComponent>(Components);
+    for (int32 i = 0; i < Components.Num(); i++)
+    {
+        UStaticMeshComponent* StaticMeshComponent = Components[i];
+        StaticMesh = StaticMeshComponent->GetStaticMesh();
+    }
+
+
+    //FVector Velocity = this->GetVelocity();
+    //actor->GetRootComponent()->ComponentVelocity = Velocity;
+
     Controller->Possess(actor);
     controller->SetControlRotation(CurrentControllerRotation);
 
-    //destroys current actor
     this->Destroy();
 
     UE_LOG(LogTemp, Warning, TEXT("interact"));
