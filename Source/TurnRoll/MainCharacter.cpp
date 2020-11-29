@@ -224,5 +224,6 @@ TSubclassOf<APawn> AMainCharacter::DetermineCharacter(int f1)
         return GameInstance->CharacterRosterTwo;
     }
 
+    //returns nullPtr if nothing is returned
     return ReturnValue;
 }

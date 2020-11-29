@@ -121,4 +121,14 @@
       <Filter>Source\TurnRoll</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\TurnRoll\JeffCharacter.h">
+      <Filter>Source\TurnRoll</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\TurnRoll\JeffCharacter.cpp">
+      <Filter>Source\TurnRoll</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>

@@ -61,9 +61,6 @@ public:
     UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
         TSubclassOf<UUserWidget> pauseWidget;
 
-    UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
-        APawn* CharacterSwap;
-
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
         TSubclassOf<APawn> targetActor;
 
