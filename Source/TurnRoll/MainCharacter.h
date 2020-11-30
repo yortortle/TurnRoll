@@ -29,10 +29,10 @@ protected:
     virtual void BeginPlay() override;
     // Called for forwards/backward input 
 
-    void MoveForward(float Value);
+    virtual void MoveForward(float Value);
 
     // Called for side to side input 
-    void MoveRight(float Value);
+    virtual void MoveRight(float Value);
 
     //rate chracter is turned
     void TurnAtRate(float Rate);
@@ -43,14 +43,11 @@ protected:
     /** Handler for when a touch input stops. */
     void TouchStopped(ETouchIndex::Type FingerIndex, FVector Location);
 
-   // virtual void Interact();
-
     UFUNCTION(BlueprintCallable)
     void SwitchCharacter1();
 
     UFUNCTION(BlueprintCallable)
     void SwitchCharacter2();
-
 
     //set up player component inputs to override
     virtual void SetupPlayerInputComponent (class UInputComponent* InputComponent) override;
@@ -87,8 +84,9 @@ public:
     float axisValue2;
 
     UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
-    float AttackBool;
+    bool AttackBool;
 
+    UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
     FTimerHandle AttackTimer;
 
 

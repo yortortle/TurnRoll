@@ -156,7 +156,7 @@ void AMainCharacter::Interact()
 
     //GetWorldTimerMananger()->SetTimer(
     //GetWorldTimerManager().IsTimerActive(Clock)
-    GetWorldTimerManager().SetTimer(AttackTimer, this, &AMainCharacter::AttackTimerExecute, 1.f, false);
+    //GetWorldTimerManager().SetTimer(AttackTimer, this, &AMainCharacter::AttackTimerExecute, 1.f, false);
 }
 
 void AMainCharacter::Action()

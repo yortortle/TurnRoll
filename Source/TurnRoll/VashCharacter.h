@@ -16,4 +16,8 @@ class TURNROLL_API AVashCharacter : public AMainCharacter
 	
 public:
 	virtual void Action() override;
+
+	//UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+	//	bool AttackBool;
+
 };
