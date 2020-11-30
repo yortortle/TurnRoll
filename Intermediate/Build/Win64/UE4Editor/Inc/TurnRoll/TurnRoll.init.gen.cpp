@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeTurnRoll_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x9936C693,
+				0xCFD1F8EC,
 				0x990E9505,
 				METADATA_PARAMS(nullptr, 0)
 			};

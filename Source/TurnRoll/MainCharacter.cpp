@@ -105,6 +105,13 @@ void AMainCharacter::TurnAtRate(float Rate)
 void AMainCharacter::MoveForward(float Value)
 {
     axisValue = Value;
+
+    //if timer is active disable movemen
+    if (GetWorldTimerManager().IsTimerActive(AttackTimer))
+    {
+        return;
+    }
+
     //checks for controller and if there is an actual input passed to it
     if ((Controller != NULL) && (Value != 0.0f))
     {
@@ -120,7 +127,14 @@ void AMainCharacter::MoveForward(float Value)
 }
 void AMainCharacter::MoveRight(float Value)
 {
+    //grabs axis value for movement animation in 3d model for characters
     axisValue2 = Value;
+
+    if (GetWorldTimerManager().IsTimerActive(AttackTimer))
+    {
+        return;
+    }
+
     if ((Controller != NULL) && (Value != 0.0f))
     {
         // find out which way is right
@@ -138,6 +152,11 @@ void AMainCharacter::MoveRight(float Value)
 
 void AMainCharacter::Interact()
 {
+    AttackBool = true;
+
+    //GetWorldTimerMananger()->SetTimer(
+    //GetWorldTimerManager().IsTimerActive(Clock)
+    GetWorldTimerManager().SetTimer(AttackTimer, this, &AMainCharacter::AttackTimerExecute, 1.f, false);
 }
 
 void AMainCharacter::Action()
@@ -235,4 +254,9 @@ TSubclassOf<APawn> AMainCharacter::DetermineCharacter(int f1)
 
     //returns nullPtr if nothing is returned
     return ReturnValue;
+}
+
+void AMainCharacter::AttackTimerExecute()
+{
+    UE_LOG(LogTemp, Warning, TEXT("Attack Timer Executed"));
 }

@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeJeffCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AJeffCharacter, 2908271949);
+	IMPLEMENT_CLASS(AJeffCharacter, 2092593795);
 	template<> TURNROLL_API UClass* StaticClass<AJeffCharacter>()
 	{
 		return AJeffCharacter::StaticClass();

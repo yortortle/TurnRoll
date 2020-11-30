@@ -6,6 +6,7 @@
 #include "GameFramework//Actor.h"
 #include "GameFramework/Character.h"
 #include "Blueprint/UserWidget.h"
+#include "TimerManager.h"
 #include "MyGameInstance.h"
 #include "MainCharacter.generated.h"
 
@@ -85,6 +86,10 @@ public:
     UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
     float axisValue2;
 
+    UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+    float AttackBool;
+
+    FTimerHandle AttackTimer;
 
 
     UMyGameInstance* GameInstance;
@@ -94,6 +99,9 @@ public:
     TSubclassOf<APawn> DetermineCharacter(int f1);
 
     int WhichCharacter = 0;
+
+    void AttackTimerExecute();
+
 
 
     //gets camera boom object
