@@ -259,4 +259,6 @@ TSubclassOf<APawn> AMainCharacter::DetermineCharacter(int f1)
 void AMainCharacter::AttackTimerExecute()
 {
     UE_LOG(LogTemp, Warning, TEXT("Attack Timer Executed"));
+
+    AttackBool = false;
 }
