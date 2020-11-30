@@ -120,7 +120,7 @@ void AMainCharacter::MoveForward(float Value)
 }
 void AMainCharacter::MoveRight(float Value)
 {
-    //axisValue = Value;
+    axisValue2 = Value;
     if ((Controller != NULL) && (Value != 0.0f))
     {
         // find out which way is right

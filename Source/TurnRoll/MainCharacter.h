@@ -82,6 +82,9 @@ public:
     UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
     float TestFloat;
 
+    UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+    float axisValue2;
+
 
 
     UMyGameInstance* GameInstance;
