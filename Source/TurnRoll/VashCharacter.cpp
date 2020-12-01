@@ -6,27 +6,24 @@
 void AVashCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	UE_LOG(LogTemp, Warning, TEXT("Yort begin play"));
+
+	//adding dynamics and setting default collision
 	HitBox->OnComponentBeginOverlap.AddDynamic(this, &AVashCharacter::OnOverLapBegin);
 	HitBox->SetCollisionProfileName("NoCollision");
 }
 
 void AVashCharacter::Action()
 {
+	//setting a timer to delay animations in main character class
 	GetWorldTimerManager().SetTimer(AttackTimer, this, &AMainCharacter::AttackTimerExecute, .75f, false);
-	UE_LOG(LogTemp, Warning, TEXT("ActionVash"));
 
+	//setting a timer to delay NPC destruction for animation
 	GetWorldTimerManager().SetTimer(PunchTimer, this, &AVashCharacter::Punch, .4f, false);
-
-	//HitBox->SetCollisionProfileName("OverlapAllDynamic");
-	//HitBox->SetCollisionProfileName("NoCollision");
-
 }
 
 void AVashCharacter::OnOverLapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	UE_LOG(LogTemp, Warning, TEXT("VASH OVERLAP"));
-
+	//If the other actor is an enemy it will be destroyed
 	if (OtherActor->ActorHasTag("Enemy"))
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Enemy being destroyed"));
@@ -36,6 +33,7 @@ void AVashCharacter::OnOverLapBegin(UPrimitiveComponent* OverlappedComp, AActor*
 
 void AVashCharacter::Punch()
 {
+	//enabling and disabling collision
 	HitBox->SetCollisionProfileName("OverlapAllDynamic");
 	HitBox->SetCollisionProfileName("NoCollision");
 }

@@ -6,8 +6,9 @@
 void AJeffCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	UE_LOG(LogTemp, Warning, TEXT("Begin Play Jeff"))
+	UE_LOG(LogTemp, Warning, TEXT("JEFF"));
 	HitBox->OnComponentBeginOverlap.AddDynamic(this, &AJeffCharacter::OnOverLapBegin);
+	HitBox->SetCollisionProfileName("NoCollision");
 }
 void AJeffCharacter::Interact()
 {
@@ -17,11 +18,22 @@ void AJeffCharacter::Interact()
 void AJeffCharacter::Action()
 {
 	GetWorldTimerManager().SetTimer(AttackTimer, this, &AMainCharacter::AttackTimerExecute, .75f, false);
-	UE_LOG(LogTemp, Warning, TEXT("ActionJeff"));
+
+	//setting a timer to delay NPC destruction for animation
+	GetWorldTimerManager().SetTimer(PunchTimer, this, &AJeffCharacter::Punch, .4f, false);
 }
 
 void AJeffCharacter::OnOverLapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	UE_LOG(LogTemp, Warning, TEXT("Overlapjeff"));
-	//OtherActor.
+	//destroy whatever actor is hit
+	OtherActor->Destroy();
 }
+
+void AJeffCharacter::Punch()
+{
+	//enabling and disabling collision
+	HitBox->SetCollisionProfileName("OverlapAllDynamic");
+	HitBox->SetCollisionProfileName("NoCollision");
+}
+
+
