@@ -51,7 +51,7 @@ void AHaydenCharacter::Action()
 			FVector Dir = RotationTest.Vector();
 
 			//setting up the end line trace parameters and the hit results for the line trace
-			FVector End = Start + (Dir* 1000);
+			FVector End = Start + (Dir* 5000);
 			FHitResult Hit;
 			FCollisionQueryParams TraceParams;
 
@@ -60,21 +60,15 @@ void AHaydenCharacter::Action()
 
 			if (Hit.IsValidBlockingHit())
 			{
-				UE_LOG(LogTemp, Warning, TEXT("Hit something i think"));
+				//UE_LOG(LogTemp, Warning, TEXT("Hit something"));
 			}
-
-			//FLatentActionInfo ActionInfo;
-			//ActionInfo.ExecutionFunction = "Action";
-			//AActor* TargetPointRef = GetWorld()->SpawnActor<AActor>(TeleportPoint, Hit.Location, CurrentRotation, SpawnParams);
-			//UKismetSystemLibrary::RetriggerableDelay(GetWorld(), 0.1, ActionInfo);
-			//Hit.bBlockingHit
 
 			IsActive = true;
 			TeleportLocation = Hit.Location;
 			TargetPointRef = GetWorld()->SpawnActor<AActor>(TeleportPoint, Hit.Location, CurrentRotation, SpawnParams);
 
 			//debug for line trace
-			DrawDebugLine(GetWorld(), Start, End, FColor::Orange, false, 1.0f);
+			//DrawDebugLine(GetWorld(), Start, End, FColor::Orange, false, 1.0f);
 		}
 
 
