@@ -15,23 +15,26 @@ void AYortCharacter::Action()
 {
 	//sets timer for attack animation which will return and stop my character from moving
 	GetWorldTimerManager().SetTimer(AttackTimer, this, &AMainCharacter::AttackTimerExecute, 1, false);
-	UE_LOG(LogTemp, Warning, TEXT("YortAction"));
-	HitBox->SetCollisionProfileName("OverlapAllDynamic");
-	HitBox->SetCollisionProfileName("NoCollision");
+
+	//setting a timer so that the tree being cut is more realistic with the animation.
+	GetWorldTimerManager().SetTimer(TreeCut, this, &AYortCharacter::CutTree, .2f, false);
+
 }
 
 void AYortCharacter::OnOverLapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-
-	//UE_LOG(LogTemp, Warning, TEXT("YortOverLap"));
-
-	//turning the collision box on
-
-	HitBox->SetCollisionProfileName("OverlapAllDynamic");
+	//Destroys the other actor (being a tree, nothing will happen otherwise)
 	if (OtherActor->ActorHasTag("Tree"))
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Tree Collided"));
+		UE_LOG(LogTemp, Warning, TEXT("Tree being destroyed"));
 		OtherActor->Destroy();
 	}
-	UE_LOG(LogTemp, Warning, TEXT("Overlap"));
 }
+
+void AYortCharacter::CutTree()
+{
+	//enalbes and then disables collision so that overlap will begin
+	HitBox->SetCollisionProfileName("OverlapAllDynamic");
+	HitBox->SetCollisionProfileName("NoCollision");
+}
+
