@@ -162,6 +162,7 @@ void AMainCharacter::Interact()
 void AMainCharacter::Action()
 {
     UE_LOG(LogTemp, Warning, TEXT("Action"));
+    Jump();
 }
 
 void AMainCharacter::SwitchCharacter1()
