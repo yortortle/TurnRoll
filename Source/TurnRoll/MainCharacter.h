@@ -50,6 +50,9 @@ protected:
     UFUNCTION(BlueprintCallable)
     void SwitchCharacter2();
 
+    UFUNCTION(BlueprintCallable)
+    void SwitchCharacter3();
+
     //set up player component inputs to override
     virtual void SetupPlayerInputComponent (class UInputComponent* InputComponent) override;
 
@@ -58,8 +61,6 @@ public:
     virtual void Action();
     virtual void ActionReleased();
     virtual void Interact();
-
-    //void OnOverLapBegin2(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 
     //the initial turn rate
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)

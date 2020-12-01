@@ -7,6 +7,8 @@ void AJeffCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 	UE_LOG(LogTemp, Warning, TEXT("JEFF"));
+
+	//adding dynamic for box component and setting its collision
 	HitBox->OnComponentBeginOverlap.AddDynamic(this, &AJeffCharacter::OnOverLapBegin);
 	HitBox->SetCollisionProfileName("NoCollision");
 }
@@ -17,6 +19,7 @@ void AJeffCharacter::Interact()
 
 void AJeffCharacter::Action()
 {
+	//attack timer for maincharacter class to delay animations
 	GetWorldTimerManager().SetTimer(AttackTimer, this, &AMainCharacter::AttackTimerExecute, .75f, false);
 
 	//setting a timer to delay NPC destruction for animation

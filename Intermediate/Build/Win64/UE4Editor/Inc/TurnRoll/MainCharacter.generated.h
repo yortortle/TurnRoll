@@ -15,6 +15,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 #define TurnRoll_Source_TurnRoll_MainCharacter_h_17_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execSwitchCharacter3) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SwitchCharacter3(); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execSwitchCharacter2) \
 	{ \
 		P_FINISH; \
@@ -33,6 +41,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 
 #define TurnRoll_Source_TurnRoll_MainCharacter_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execSwitchCharacter3) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SwitchCharacter3(); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execSwitchCharacter2) \
 	{ \

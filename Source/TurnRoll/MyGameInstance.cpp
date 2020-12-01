@@ -96,7 +96,7 @@ void UMyGameInstance::Init()
 	//passes in the ID of the party member to create and return a main character into the TArray PartyMembers
 	this->PartyMembers.Add(UCharacterState::CreateGameCharacter(char1, this));
 	this->PartyMembers.Add(UCharacterState::CreateGameCharacter(char2, this));
-	
+	this->PartyMembers.Add(UCharacterState::CreateGameCharacter(char3, this));
 	
 	//this->PartyMembers.Add(UCharacterState::CreateGameCharacter(char3, this));
 	//this->PartyMembers.Add(UCharacterState::CreateGameCharacter(char4, this));

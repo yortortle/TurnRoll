@@ -93,6 +93,7 @@ void AMainCharacter::SetupPlayerInputComponent(class UInputComponent* InputCompo
     InputComponent->BindAction("Interact", IE_Pressed, this, &AMainCharacter::Interact);
     InputComponent->BindAction("SwitchCharacter1", IE_Pressed, this, &AMainCharacter::SwitchCharacter1);
     InputComponent->BindAction("SwitchCharacter2", IE_Pressed, this, &AMainCharacter::SwitchCharacter2);
+    InputComponent->BindAction("SwitchCharacter3", IE_Pressed, this, &AMainCharacter::SwitchCharacter3);
     InputComponent->BindAction("Action", IE_Pressed, this, &AMainCharacter::Action);
     InputComponent->BindAction("Action", IE_Released, this, &AMainCharacter::ActionReleased);
 }
@@ -240,11 +241,13 @@ void AMainCharacter::SwitchCharacter2()
     SwitchCharacter1();
 }
 
-//void AMainCharacter::OnOverLapBegin2(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
-//{
-//    UE_LOG(LogTemp, Warning, TEXT("Main Character Overlap has begun"));
-//    UE_LOG(LogTemp, Warning, TEXT("Main Character Overlap has begun"));
-//}
+void AMainCharacter::SwitchCharacter3()
+{
+    UE_LOG(LogTemp, Warning, TEXT("Third Character Switch"));
+    WhichCharacter = 2;
+    SwitchCharacter1();
+
+}
 
 TSubclassOf<APawn> AMainCharacter::DetermineCharacter(int f1)
 {

@@ -137,7 +137,7 @@ void EmptyLinkFunctionForGeneratedCodeHaydenCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AHaydenCharacter, 1507117356);
+	IMPLEMENT_CLASS(AHaydenCharacter, 720287283);
 	template<> TURNROLL_API UClass* StaticClass<AHaydenCharacter>()
 	{
 		return AHaydenCharacter::StaticClass();

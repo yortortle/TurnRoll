@@ -19,6 +19,7 @@ void EmptyLinkFunctionForGeneratedCodeMainCharacter() {}
 	UPackage* Z_Construct_UPackage__Script_TurnRoll();
 	TURNROLL_API UFunction* Z_Construct_UFunction_AMainCharacter_SwitchCharacter1();
 	TURNROLL_API UFunction* Z_Construct_UFunction_AMainCharacter_SwitchCharacter2();
+	TURNROLL_API UFunction* Z_Construct_UFunction_AMainCharacter_SwitchCharacter3();
 	ENGINE_API UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FTimerHandle();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
@@ -33,6 +34,7 @@ void EmptyLinkFunctionForGeneratedCodeMainCharacter() {}
 		static const FNameNativePtrPair Funcs[] = {
 			{ "SwitchCharacter1", &AMainCharacter::execSwitchCharacter1 },
 			{ "SwitchCharacter2", &AMainCharacter::execSwitchCharacter2 },
+			{ "SwitchCharacter3", &AMainCharacter::execSwitchCharacter3 },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
 	}
@@ -77,6 +79,28 @@ void EmptyLinkFunctionForGeneratedCodeMainCharacter() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AMainCharacter_SwitchCharacter2_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AMainCharacter_SwitchCharacter3_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMainCharacter_SwitchCharacter3_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "MainCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AMainCharacter_SwitchCharacter3_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMainCharacter, nullptr, "SwitchCharacter3", 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMainCharacter_SwitchCharacter3_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_AMainCharacter_SwitchCharacter3_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AMainCharacter_SwitchCharacter3()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AMainCharacter_SwitchCharacter3_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -169,6 +193,7 @@ void EmptyLinkFunctionForGeneratedCodeMainCharacter() {}
 	const FClassFunctionLinkInfo Z_Construct_UClass_AMainCharacter_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_AMainCharacter_SwitchCharacter1, "SwitchCharacter1" }, // 3669891152
 		{ &Z_Construct_UFunction_AMainCharacter_SwitchCharacter2, "SwitchCharacter2" }, // 295941835
+		{ &Z_Construct_UFunction_AMainCharacter_SwitchCharacter3, "SwitchCharacter3" }, // 3084410064
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMainCharacter_Statics::Class_MetaDataParams[] = {
@@ -352,7 +377,7 @@ void EmptyLinkFunctionForGeneratedCodeMainCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AMainCharacter, 3590062734);
+	IMPLEMENT_CLASS(AMainCharacter, 2484003466);
 	template<> TURNROLL_API UClass* StaticClass<AMainCharacter>()
 	{
 		return AMainCharacter::StaticClass();
