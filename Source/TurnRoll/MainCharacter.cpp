@@ -163,8 +163,7 @@ void AMainCharacter::Action()
 {
     UE_LOG(LogTemp, Warning, TEXT("Action"));
     IsJumping = true;
-    GetWorldTimerManager().SetTimer(JumpTimer, this, &AMainCharacter::JumpTimerExecute, 1.f, false);
-    Jump();
+    GetWorldTimerManager().SetTimer(JumpTimer, this, &AMainCharacter::JumpTimerExecute, .5f, false);
 }
 
 void AMainCharacter::SwitchCharacter1()
@@ -269,6 +268,8 @@ void AMainCharacter::AttackTimerExecute()
 void AMainCharacter::JumpTimerExecute()
 {
     UE_LOG(LogTemp, Warning, TEXT("Attack Timer Executed"));
+
+    Jump();
 
     IsJumping = false;
 }
