@@ -30,6 +30,8 @@ public:
 	bool IsActive = false;
 	virtual void Tick(float DeltaTime) override;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	AActor* TargetPointRef;
 
 	//Read BP of particles for teleport
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

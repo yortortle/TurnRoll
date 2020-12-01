@@ -6,8 +6,12 @@
 
 void AHaydenCharacter::Tick(float DeltaTime)
 {
-	if (CanTeleport)
+	if (IsActive)
 	{
+		if (TargetPointRef != nullptr)
+		{
+			TargetPointRef->Destroy();
+		}
 		Action();
 	}
 }
@@ -66,7 +70,7 @@ void AHaydenCharacter::Action()
 			//Hit.bBlockingHit
 
 			IsActive = true;
-			AActor* TargetPointRef = GetWorld()->SpawnActor<AActor>(TeleportPoint, Hit.Location, CurrentRotation, SpawnParams);
+			TargetPointRef = GetWorld()->SpawnActor<AActor>(TeleportPoint, Hit.Location, CurrentRotation, SpawnParams);
 
 			//debug for line trace
 			DrawDebugLine(GetWorld(), Start, End, FColor::Orange, false, 1.0f);
