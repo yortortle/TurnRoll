@@ -87,7 +87,17 @@ public:
     bool AttackBool;
 
     UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+    bool IsJumping;
+
+    UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+    bool IsFallingCurrently;
+
+    UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
     FTimerHandle AttackTimer;
+
+    UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+    FTimerHandle JumpTimer;
+
 
 
     UMyGameInstance* GameInstance;
@@ -99,6 +109,8 @@ public:
     int WhichCharacter = 0;
 
     void AttackTimerExecute();
+
+    void JumpTimerExecute();
 
 
 

@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeVashCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AVashCharacter, 2108274489);
+	IMPLEMENT_CLASS(AVashCharacter, 2128023014);
 	template<> TURNROLL_API UClass* StaticClass<AVashCharacter>()
 	{
 		return AVashCharacter::StaticClass();
