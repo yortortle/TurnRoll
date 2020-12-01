@@ -24,6 +24,10 @@ public:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
 	bool CanTeleport = true;
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+	bool Teleporting = false;
+
+
 	//Read BP of particles for teleport
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TSubclassOf<AActor> TeleportPoint;
