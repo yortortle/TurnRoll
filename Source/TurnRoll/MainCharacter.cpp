@@ -112,6 +112,11 @@ void AMainCharacter::MoveForward(float Value)
         return;
     }
 
+    if (GetWorldTimerManager().IsTimerActive(JumpTimer))
+    {
+        return;
+    }
+
     //checks for controller and if there is an actual input passed to it
     if ((Controller != NULL) && (Value != 0.0f))
     {
@@ -131,6 +136,11 @@ void AMainCharacter::MoveRight(float Value)
     axisValue2 = Value;
 
     if (GetWorldTimerManager().IsTimerActive(AttackTimer))
+    {
+        return;
+    }
+
+    if (GetWorldTimerManager().IsTimerActive(JumpTimer))
     {
         return;
     }
@@ -163,7 +173,7 @@ void AMainCharacter::Action()
 {
     UE_LOG(LogTemp, Warning, TEXT("Action"));
     IsJumping = true;
-    GetWorldTimerManager().SetTimer(JumpTimer, this, &AMainCharacter::JumpTimerExecute, .5f, false);
+    GetWorldTimerManager().SetTimer(JumpTimer, this, &AMainCharacter::JumpTimerExecute, .8f, false);
 }
 
 void AMainCharacter::SwitchCharacter1()
