@@ -27,6 +27,9 @@ public:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
 	bool Teleporting = false;
 
+	bool IsActive = false;
+	virtual void Tick(float DeltaTime) override;
+
 
 	//Read BP of particles for teleport
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

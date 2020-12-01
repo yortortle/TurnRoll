@@ -4,6 +4,14 @@
 #include "HaydenCharacter.h"
 #include "DrawDebugHelpers.h"
 
+void AHaydenCharacter::Tick(float DeltaTime)
+{
+	if (CanTeleport)
+	{
+		Action();
+	}
+}
+
 void AHaydenCharacter::Action()
 {
 	//if teleport is not on cooldown can use function
@@ -57,7 +65,7 @@ void AHaydenCharacter::Action()
 			//UKismetSystemLibrary::RetriggerableDelay(GetWorld(), 0.1, ActionInfo);
 			//Hit.bBlockingHit
 
-			bool isActive = true;
+			IsActive = true;
 			AActor* TargetPointRef = GetWorld()->SpawnActor<AActor>(TeleportPoint, Hit.Location, CurrentRotation, SpawnParams);
 
 			//debug for line trace
