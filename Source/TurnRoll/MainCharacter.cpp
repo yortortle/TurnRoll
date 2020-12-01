@@ -84,6 +84,7 @@ void AMainCharacter::SetupPlayerInputComponent(class UInputComponent* InputCompo
     InputComponent->BindAction("SwitchCharacter1", IE_Pressed, this, &AMainCharacter::SwitchCharacter1);
     InputComponent->BindAction("SwitchCharacter2", IE_Pressed, this, &AMainCharacter::SwitchCharacter2);
     InputComponent->BindAction("Action", IE_Pressed, this, &AMainCharacter::Action);
+    InputComponent->BindAction("Action", IE_Released, this, &AMainCharacter::ActionReleased);
 }
 
 void AMainCharacter::TouchStarted(ETouchIndex::Type FingerIndex, FVector Location)
@@ -174,6 +175,11 @@ void AMainCharacter::Action()
     UE_LOG(LogTemp, Warning, TEXT("Action"));
     IsJumping = true;
     GetWorldTimerManager().SetTimer(JumpTimer, this, &AMainCharacter::JumpTimerExecute, .5, false);
+}
+
+void AMainCharacter::ActionReleased()
+{
+    UE_LOG(LogTemp, Warning, TEXT("Left Mouse Released"));
 }
 
 void AMainCharacter::SwitchCharacter1()

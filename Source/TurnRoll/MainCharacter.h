@@ -55,7 +55,7 @@ protected:
 public:
 
     virtual void Action();
-
+    virtual void ActionReleased();
     virtual void Interact();
 
     //the initial turn rate

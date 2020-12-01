@@ -17,6 +17,7 @@ class TURNROLL_API AHaydenCharacter : public AMainCharacter
 	
 public:
 	virtual void Action() override;
+	virtual void ActionReleased() override;
 
 protected:
 
@@ -27,6 +28,7 @@ public:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
 	bool Teleporting = false;
 
+	FVector TeleportLocation;
 	bool IsActive = false;
 	virtual void Tick(float DeltaTime) override;
 

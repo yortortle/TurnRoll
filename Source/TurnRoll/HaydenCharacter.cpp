@@ -70,6 +70,7 @@ void AHaydenCharacter::Action()
 			//Hit.bBlockingHit
 
 			IsActive = true;
+			TeleportLocation = Hit.Location;
 			TargetPointRef = GetWorld()->SpawnActor<AActor>(TeleportPoint, Hit.Location, CurrentRotation, SpawnParams);
 
 			//debug for line trace
@@ -82,4 +83,11 @@ void AHaydenCharacter::Action()
 		//GetWorld()->SpawnActor()
 	}
 	UE_LOG(LogTemp, Warning, TEXT("HaydenAction"));
+}
+
+void AHaydenCharacter::ActionReleased()
+{
+	IsActive = false;
+	TargetPointRef->Destroy();
+	this->TeleportTo(TeleportLocation, GetActorRotation(), false, false);
 }
