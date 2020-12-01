@@ -21,7 +21,7 @@ void AHaydenCharacter::Action()
 		}
 
 
-		AActor* TargetPointRef = GetWorld()->SpawnActor<AActor>(TeleportPoint, SpawnLocation, CurrentRotation, SpawnParams);
+		//AActor* TargetPointRef = GetWorld()->SpawnActor<AActor>(TeleportPoint, SpawnLocation, CurrentRotation, SpawnParams);
 
 		Teleporting = true;
 
@@ -50,7 +50,15 @@ void AHaydenCharacter::Action()
 			{
 				UE_LOG(LogTemp, Warning, TEXT("Hit something i think"));
 			}
+
+			//FLatentActionInfo ActionInfo;
+			//ActionInfo.ExecutionFunction = "Action";
+			//AActor* TargetPointRef = GetWorld()->SpawnActor<AActor>(TeleportPoint, Hit.Location, CurrentRotation, SpawnParams);
+			//UKismetSystemLibrary::RetriggerableDelay(GetWorld(), 0.1, ActionInfo);
 			//Hit.bBlockingHit
+
+			bool isActive = true;
+			AActor* TargetPointRef = GetWorld()->SpawnActor<AActor>(TeleportPoint, Hit.Location, CurrentRotation, SpawnParams);
 
 			//debug for line trace
 			DrawDebugLine(GetWorld(), Start, End, FColor::Orange, false, 1.0f);
