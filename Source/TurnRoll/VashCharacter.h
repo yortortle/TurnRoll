@@ -15,9 +15,14 @@ class TURNROLL_API AVashCharacter : public AMainCharacter
 	GENERATED_BODY()
 	
 public:
+	virtual void BeginPlay() override;
 	virtual void Action() override;
 
 	//UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
 	//	bool AttackBool;
+
+	UFUNCTION()
+	void OnOverLapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+
 
 };

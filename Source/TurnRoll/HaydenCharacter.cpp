@@ -73,7 +73,7 @@ void AHaydenCharacter::Action()
 			//DrawDebugLine(GetWorld(), Start, End, FColor::Orange, false, 1.0f);
 		}
 	}
-	UE_LOG(LogTemp, Warning, TEXT("HaydenAction"));
+	//UE_LOG(LogTemp, Warning, TEXT("HaydenAction"));
 }
 
 void AHaydenCharacter::ActionReleased()
