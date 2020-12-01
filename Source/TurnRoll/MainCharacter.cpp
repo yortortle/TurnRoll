@@ -18,6 +18,10 @@ AMainCharacter::AMainCharacter()
     // Set collision capsule
     GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
 
+    //creating the box component and attaching to root
+    HitBox = CreateDefaultSubobject<UBoxComponent>(TEXT("Hit Box"));
+    HitBox->AttachTo(RootComponent);
+
     // set our turn rates for input
     BaseTurnRate = 45.f;
 
@@ -62,7 +66,11 @@ AMainCharacter::AMainCharacter()
 void AMainCharacter::BeginPlay()
 {
     Super::BeginPlay();
+
+    //this sets the input mode to game only to focus on the character immediately, useful in interactions with UMG widgets later on
     UGameplayStatics::GetPlayerController(GetWorld(), 0)->SetInputMode(FInputModeGameOnly());
+
+    //HitBox->OnComponentBeginOverlap.AddDynamic(this, &AMainCharacter::OnOverLapBegin);
 }
 
 void AMainCharacter::SetupPlayerInputComponent(class UInputComponent* InputComponent)
@@ -164,10 +172,6 @@ void AMainCharacter::MoveRight(float Value)
 void AMainCharacter::Interact()
 {
     AttackBool = true;
-
-    //GetWorldTimerMananger()->SetTimer(
-    //GetWorldTimerManager().IsTimerActive(Clock)
-    //GetWorldTimerManager().SetTimer(AttackTimer, this, &AMainCharacter::AttackTimerExecute, 1.f, false);
 }
 
 void AMainCharacter::Action()
@@ -234,6 +238,11 @@ void AMainCharacter::SwitchCharacter2()
     SwitchCharacter1();
 }
 
+void AMainCharacter::OnOverLapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+    UE_LOG(LogTemp, Warning, TEXT("Overlap has begun"));
+}
+
 TSubclassOf<APawn> AMainCharacter::DetermineCharacter(int f1)
 {
     //sets a TArray from game instance party members to check for which party member is active later.
@@ -283,7 +292,7 @@ void AMainCharacter::AttackTimerExecute()
 
 void AMainCharacter::JumpTimerExecute()
 {
-    UE_LOG(LogTemp, Warning, TEXT("Attack Timer Executed"));
+    UE_LOG(LogTemp, Warning, TEXT("Jump Timer Executed"));
 
     Jump();
 

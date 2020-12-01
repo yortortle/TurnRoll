@@ -78,6 +78,7 @@ void EmptyLinkFunctionForGeneratedCodeHaydenCharacter() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AHaydenCharacter_Statics::NewProp_TargetPointRef_MetaData[] = {
 		{ "Category", "HaydenCharacter" },
 		{ "ModuleRelativePath", "HaydenCharacter.h" },
+		{ "ToolTip", "reference for destroying previous actor and getting teleport location" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AHaydenCharacter_Statics::NewProp_TargetPointRef = { "TargetPointRef", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AHaydenCharacter, TargetPointRef), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AHaydenCharacter_Statics::NewProp_TargetPointRef_MetaData, ARRAY_COUNT(Z_Construct_UClass_AHaydenCharacter_Statics::NewProp_TargetPointRef_MetaData)) };
@@ -136,7 +137,7 @@ void EmptyLinkFunctionForGeneratedCodeHaydenCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AHaydenCharacter, 702503370);
+	IMPLEMENT_CLASS(AHaydenCharacter, 1507117356);
 	template<> TURNROLL_API UClass* StaticClass<AHaydenCharacter>()
 	{
 		return AHaydenCharacter::StaticClass();

@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeYortCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AYortCharacter, 2051510577);
+	IMPLEMENT_CLASS(AYortCharacter, 1949912158);
 	template<> TURNROLL_API UClass* StaticClass<AYortCharacter>()
 	{
 		return AYortCharacter::StaticClass();

@@ -30,8 +30,10 @@ public:
 
 	FVector TeleportLocation;
 	bool IsActive = false;
+
 	virtual void Tick(float DeltaTime) override;
 
+	//reference for destroying previous actor and getting teleport location
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	AActor* TargetPointRef;
 

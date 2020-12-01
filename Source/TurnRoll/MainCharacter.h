@@ -6,6 +6,7 @@
 #include "GameFramework//Actor.h"
 #include "GameFramework/Character.h"
 #include "Blueprint/UserWidget.h"
+#include "Components/BoxComponent.h"
 #include "TimerManager.h"
 #include "MyGameInstance.h"
 #include "MainCharacter.generated.h"
@@ -57,6 +58,7 @@ public:
     virtual void Action();
     virtual void ActionReleased();
     virtual void Interact();
+    virtual void OnOverLapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 
     //the initial turn rate
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
@@ -98,11 +100,10 @@ public:
     UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
     FTimerHandle JumpTimer;
 
-
+    UPROPERTY(VisibleAnywhere)
+    UBoxComponent* HitBox;
 
     UMyGameInstance* GameInstance;
-
-    //TSubclassOf<APawn> DetermineCharacter(int f1);
 
     TSubclassOf<APawn> DetermineCharacter(int f1);
 

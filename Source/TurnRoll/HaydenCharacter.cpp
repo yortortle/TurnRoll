@@ -21,19 +21,17 @@ void AHaydenCharacter::Action()
 	//if teleport is not on cooldown can use function
 	if (CanTeleport == true)
 	{
+		//grabbing location and rotation for spawning of particles
 		FRotator CurrentRotation = this->GetActorRotation();
 		FVector SpawnLocation = this->GetActorLocation();
-		//SpawnLocation.X += 100;
 		FActorSpawnParameters SpawnParams;
 
+		//returns if teleportpoint is not set properly
 		if (TeleportPoint == nullptr)
 		{
 			return;
 			UE_LOG(LogTemp, Warning, TEXT("teleport point is null"));
 		}
-
-
-		//AActor* TargetPointRef = GetWorld()->SpawnActor<AActor>(TeleportPoint, SpawnLocation, CurrentRotation, SpawnParams);
 
 		Teleporting = true;
 
@@ -60,27 +58,27 @@ void AHaydenCharacter::Action()
 
 			if (Hit.IsValidBlockingHit())
 			{
+				//debug test to see if line trace is colliding with block properly
 				//UE_LOG(LogTemp, Warning, TEXT("Hit something"));
 			}
 
+			//sets active to true so tick function can repeat action until mouse is released
 			IsActive = true;
 			TeleportLocation = Hit.Location;
+
+			//line tracing function, determins line trace and returns hit object.
 			TargetPointRef = GetWorld()->SpawnActor<AActor>(TeleportPoint, Hit.Location, CurrentRotation, SpawnParams);
 
 			//debug for line trace
 			//DrawDebugLine(GetWorld(), Start, End, FColor::Orange, false, 1.0f);
 		}
-
-
-
-		UE_LOG(LogTemp, Warning, TEXT("can teleport"));
-		//GetWorld()->SpawnActor()
 	}
 	UE_LOG(LogTemp, Warning, TEXT("HaydenAction"));
 }
 
 void AHaydenCharacter::ActionReleased()
 {
+	//sets hit active to false, teleports this actor, and destroys the projectile left behind hit trace to indicate teleport location.
 	IsActive = false;
 	TargetPointRef->Destroy();
 	this->TeleportTo(TeleportLocation, GetActorRotation(), false, false);
