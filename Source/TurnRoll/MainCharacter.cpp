@@ -67,10 +67,12 @@ void AMainCharacter::BeginPlay()
 {
     Super::BeginPlay();
 
+    UE_LOG(LogTemp, Warning, TEXT("MC begin play"));
+
     //this sets the input mode to game only to focus on the character immediately, useful in interactions with UMG widgets later on
     UGameplayStatics::GetPlayerController(GetWorld(), 0)->SetInputMode(FInputModeGameOnly());
 
-    //HitBox->OnComponentBeginOverlap.AddDynamic(this, &AMainCharacter::OnOverLapBegin);
+   // HitBox->OnComponentBeginOverlap.AddDynamic(this, &AMainCharacter::OnOverLapBegin2);
 }
 
 void AMainCharacter::SetupPlayerInputComponent(class UInputComponent* InputComponent)
@@ -238,10 +240,11 @@ void AMainCharacter::SwitchCharacter2()
     SwitchCharacter1();
 }
 
-void AMainCharacter::OnOverLapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
-{
-    UE_LOG(LogTemp, Warning, TEXT("Overlap has begun"));
-}
+//void AMainCharacter::OnOverLapBegin2(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+//{
+//    UE_LOG(LogTemp, Warning, TEXT("Main Character Overlap has begun"));
+//    UE_LOG(LogTemp, Warning, TEXT("Main Character Overlap has begun"));
+//}
 
 TSubclassOf<APawn> AMainCharacter::DetermineCharacter(int f1)
 {

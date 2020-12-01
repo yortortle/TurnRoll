@@ -6,11 +6,13 @@
 void AYortCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	HitBox->OnComponentBeginOverlap.AddDynamic(this, &AMainCharacter::OnOverLapBegin);
+	UE_LOG(LogTemp, Warning, TEXT("Yort begin play"));
+	HitBox->OnComponentBeginOverlap.AddDynamic(this, &AYortCharacter::OnOverLapBegin);
 }
 
 void AYortCharacter::Action()
 {
+	//sets timer for attack animation which will return and stop my character from moving
 	GetWorldTimerManager().SetTimer(AttackTimer, this, &AMainCharacter::AttackTimerExecute, 1, false);
 	UE_LOG(LogTemp, Warning, TEXT("YortAction"));
 }

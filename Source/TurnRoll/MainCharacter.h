@@ -58,7 +58,8 @@ public:
     virtual void Action();
     virtual void ActionReleased();
     virtual void Interact();
-    virtual void OnOverLapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+
+    //void OnOverLapBegin2(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 
     //the initial turn rate
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
