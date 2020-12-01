@@ -5,5 +5,6 @@
 
 void AYortCharacter::Action()
 {
+	GetWorldTimerManager().SetTimer(AttackTimer, this, &AMainCharacter::AttackTimerExecute, 1, false);
 	UE_LOG(LogTemp, Warning, TEXT("YortAction"));
 }

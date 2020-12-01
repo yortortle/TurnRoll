@@ -10,5 +10,6 @@ void AJeffCharacter::Interact()
 
 void AJeffCharacter::Action()
 {
+	GetWorldTimerManager().SetTimer(AttackTimer, this, &AMainCharacter::AttackTimerExecute, .75f, false);
 	UE_LOG(LogTemp, Warning, TEXT("ActionJeff"));
 }
