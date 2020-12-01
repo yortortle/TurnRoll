@@ -14,6 +14,10 @@ void AHaydenCharacter::Action()
 		//FActorSpawnParameters SpawnParams;
 		//GetWorld()->SpawnActor<APawn>(TeleportPoint, SpawnLocation, CurrentRotation, SpawnParams);
 
+		if (TeleportPoint == nullptr)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("teleport point is null"));
+		}
 		UE_LOG(LogTemp, Warning, TEXT("can teleport"));
 		//GetWorld()->SpawnActor()
 	}
