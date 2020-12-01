@@ -17,7 +17,7 @@ void AYortCharacter::Action()
 	GetWorldTimerManager().SetTimer(AttackTimer, this, &AMainCharacter::AttackTimerExecute, 1, false);
 
 	//setting a timer so that the tree being cut is more realistic with the animation.
-	GetWorldTimerManager().SetTimer(TreeCut, this, &AYortCharacter::CutTree, .2f, false);
+	GetWorldTimerManager().SetTimer(TreeCut, this, &AYortCharacter::CutTree, .4f, false);
 
 }
 
