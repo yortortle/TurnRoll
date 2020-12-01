@@ -137,6 +137,9 @@
     <ClInclude Include="..\..\Source\TurnRoll\VashCharacter.h">
       <Filter>Source\TurnRoll</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\TurnRoll\TeleportTarget.h">
+      <Filter>Source\TurnRoll</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\TurnRoll\JeffCharacter.cpp">
@@ -152,6 +155,9 @@
       <Filter>Source\TurnRoll</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\TurnRoll\VashCharacter.cpp">
+      <Filter>Source\TurnRoll</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TurnRoll\TeleportTarget.cpp">
       <Filter>Source\TurnRoll</Filter>
     </ClCompile>
   </ItemGroup>

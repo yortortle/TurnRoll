@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "MainCharacter.h"
+
 #include "HaydenCharacter.generated.h"
 
 /**

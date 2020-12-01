@@ -562,9 +562,11 @@
     <NMakeOutput>..\..\Binaries\HTML5\TurnRoll-HTML5-Shipping.js</NMakeOutput>
   </PropertyGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\TurnRoll\TeleportTarget.cpp" />
     <ClCompile Include="..\..\Source\TurnRoll\VashCharacter.cpp" />
     <ClCompile Include="..\..\Source\TurnRoll\WenliCharacter.cpp" />
     <ClCompile Include="..\..\Source\TurnRoll\YortCharacter.cpp" />
+    <ClInclude Include="..\..\Source\TurnRoll\TeleportTarget.h" />
     <ClInclude Include="..\..\Source\TurnRoll\VashCharacter.h" />
     <ClInclude Include="..\..\Source\TurnRoll\WenliCharacter.h" />
     <ClInclude Include="..\..\Source\TurnRoll\YortCharacter.h" />
