@@ -173,7 +173,7 @@ void AMainCharacter::Action()
 {
     UE_LOG(LogTemp, Warning, TEXT("Action"));
     IsJumping = true;
-    GetWorldTimerManager().SetTimer(JumpTimer, this, &AMainCharacter::JumpTimerExecute, .8f, false);
+    GetWorldTimerManager().SetTimer(JumpTimer, this, &AMainCharacter::JumpTimerExecute, 1, false);
 }
 
 void AMainCharacter::SwitchCharacter1()
