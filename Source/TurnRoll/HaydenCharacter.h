@@ -17,4 +17,15 @@ class TURNROLL_API AHaydenCharacter : public AMainCharacter
 	
 public:
 	virtual void Action() override;
+
+protected:
+
+public:
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+	bool CanTeleport = true;
+
+	//Read BP of particles for teleport
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TSubclassOf<AActor> TeleportPoint;
+
 };
