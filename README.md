@@ -3,7 +3,7 @@
 ### Authors: Troy Hancock
 
 <p>
-	A C++ Unreal Engine 3rd person party based puzzle game. Designed to further practice and implement data structures and class inheritence.
+	A C++ Unreal Engine 3rd person party based puzzle game. Designed to further practice and implement data structures and class inheritence a long with componenent implementation, delegate functions, player controller and pawn functions, and further understanding of the relationship between FVectors and FRotators.
 </p>
 
 ### Technologies:
